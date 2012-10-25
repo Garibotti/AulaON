@@ -2,10 +2,11 @@
 //obtém os valores digitados
 $username = $_POST["assunto"];
 $senha = $_POST["senha"];
+$escolha = $_GET["ap"]; //radiobutton
 
 //acesso ao banco de dados
 include "conecta_mysql.inc";
-$resultado = mysql_query("Select * from alunos where username = '$username' or email ='$username'");
+$resultado = mysql_query("Select * from $escolha where username = '$username' or email ='$username'");
 $linhas = mysql_num_rows ($resultado);
 
 if($linhas == 0) //testa se foi encontrado um usuario com o username ou email colocado
