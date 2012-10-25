@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="BotaoPesquisar.css" />
     <link rel="stylesheet" href="Menu.css" />
     <link rel="stylesheet" href="CSSReset.css" />
+
+    <script>
+    for (var i = 0; i < ap.length; i++) {
+         if (ap[i].checked)
+                    break;
+     }
+</script>
 </head>
 
 <body>
@@ -46,13 +53,20 @@
     <br />
     Nome de Usuário ou e-mail:
     <br />
-<input type="text" name="assunto" size="24"/><br />
+    <input type="text" name="Login" size="24"/><br />
     <br />
      Senha:
     <br /> 
-<input type="password" name="senha" size="24"/><br />
+    <input type="password" name="Senha" size="24"/><br />
     <br />
-    <a href=""><font color="#FF6600">Esqueci minha senha</font></a><br />
+    <form name="profalun"> 
+    <input type="radio" name="ap" value="professor" checked="checked"/> Sou Professor 
     <br />
-    <input type="submit" name="Enviar" value="Enviar"/>
+    <input type="radio" name="ap" value="aluno"/> Sou Aluno
+    <br /> 
+    <br />  
+    </form> 
+    <a href="">Esqueci minha senha</a><br />
+    <br />
+    <input type="submit" name="Enviar" value="Enviar" onclick=""/>
 </body>
