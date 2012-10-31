@@ -15,28 +15,10 @@
     <link rel="stylesheet" href="BotaoPesquisar.css" />
     <link rel="stylesheet" href="Menu.css" />
     <link rel="stylesheet" href="CSSReset.css" />
-    
-    <script type="text/javascript" language="javascript">
-        function passuser() {
-            for (var i = 0; i < document.profalun.ap.length; i++) {
-                if (document.profalun.ap[i].checked) {
-                    direcionar = document.profalun.ap[i].value;
-                }
-            }
-            if (direcionar == "professor") {
-                location = "http://localhost:1313/SouProfessor.htm";
-            }
-            else
-                location = "http://localhost:1313/SouAluno.htm";
-        }
-        function alerta() {
-            alert("Burro!")
-        }
-    </script>
 </head>
-
 <body>
-	<center>
+
+<center>
     <div id="menu">
 		<ul>
 			<li><a href="http://localhost:1313/Home.htm"><font color="#FF6600">Home</font></a></li>
@@ -52,7 +34,7 @@
             <section id="wrapper">
             <div id="main">
             <form>
-                <input type="text" id="pesquisar" value="Buscar no site" onfocus="if(this.value=='Buscar no site')this.value='';"/>
+                <input type="text" id="pesquisar" value="Buscar no site" onFocus="if(this.value=='Buscar no site')this.value='';"/>
                 <font color="white"><input type="submit" class="solid" value="Pesquisar"/></font>
             </form>
         </div>
@@ -62,22 +44,17 @@
     </center>
     <br />
     <br />
-    Nome de Usuário ou E-mail:
-    <br />
-    <input type="text" name="Login" size="24"/><br />
-    <br />
-     Senha:
-    <br /> 
-    <input type="password" name="Senha" size="24"/><br />
-    <br />
-    <a onclick="alerta()" href="">Esqueci minha senha</a><br />
-    <br />
-    <form name="profalun"> 
-    <input type="radio" name="ap" value="professor" checked="checked"/> Sou Professor 
-    <br />
-    <input type="radio" name="ap" value="aluno"/> Sou Aluno
-    <br /> 
-    <br />  
-    </form> 
-    <input type="submit" name="Entrar" value="Entrar" onclick="passuser()"/>
+    <p>
+        -Cadastre-se gratuitamente com seus dados;<br />
+        -O aluno deve verificar as informações condizentes com as aula, como conteúdo, valor, material utilizado, material necessário pelo aluno, horários disponíveis, dentre outros;<br /> 
+        -Será alertado ao aluno, no site e via e-mail, a sua agenda atualizada;<br />
+        -O pagamento da aula será realizado via boleto bancário;<br />
+        -Pode-se acumular créditos*;<br />
+        -O aluno receberá a confirmação do pagamento via e-mail.<br />
+        -Após cada aula o aluno fará uma avaliação do professor e da aula recebida;<br />
+        -Haverá um ranking dos alunos de acordo com o número de horas/aula recebidas, os quais concorrerão a prêmios conforme sua colocação no ranking.<br />
+        -O pagamento deve ser realizado com no mínimo de ***** de antecedência, para que haja tempo hábil do sistema reconhecer o depósito.
+    </p>
+
 </body>
+</html>
