@@ -170,12 +170,12 @@ color:#FF6600;
                 <div id="topoCliente">
                 <!--logotipo-->
                     <div id="logo">
-                    <a href="http://localhost:1313/Home.htm"><img border="0" src="/Imagens/aulaon.png" alt="Aula On" title="Aula On" width="350" height="90"></a>
+                    <a href="index.php"><img border="0" src="/Imagens/aulaon.png" alt="Aula On" title="Aula On" width="350" height="90"></a>
                     
                     <div id="login">
                     <p>Seja Bem Vindo ao Aula On!<br />
-							Faça seu <a href="http://localhost:1313/Login.htm" title="Login" style="color:#FF6600"><strong>login</strong></a>
-							ou <a href="http://localhost:1313/Cadastro.htm" title="Cadastre-se" style="color:#FF6600"><strong>cadastre-se</strong></a>
+							Faça seu <a href="Login.htm" title="Login" style="color:#FF6600"><strong>login</strong></a>
+							ou <a href="Cadastro.htm" title="Cadastre-se" style="color:#FF6600"><strong>cadastre-se</strong></a>
 					</p>
                     </div>
                     </div>
@@ -189,16 +189,16 @@ color:#FF6600;
         <!--menu-->
     <div id="menu">
 		<ul>
-			<li><a href="http://localhost:1313/Home.htm"><font color="#FF6600">Home</font></a></li>
+			<li><a href="index.php"><font color="#FF6600">Home</font></a></li>
 			<li><a href=""><font color="#FF6600">Como Funciona</font></a>
             <ul>
-                <li><a href="http://localhost:1313/CFProfessor.htm"><font color="#FF6600">Professor</font></a></li>
-                <li><a href="http://localhost:1313/CFAluno.htm"><font color="#FF6600">Aluno</font></a></li>
+                <li><a href="CFProfessor.htm"><font color="#FF6600">Professor</font></a></li>
+                <li><a href="CFAluno.htm"><font color="#FF6600">Aluno</font></a></li>
             </ul></li>
-			<li><a href="http://localhost:1313/AulasDisponiveis.htm"><font color="#FF6600">Aulas Disponíveis</font></a></li>
-			<li><a href="http://localhost:1313/DuvidasFrequentes.htm"><font color="#FF6600">Duvidas Frequentes</font></a></li>
-			<li><a href="http://localhost:1313/Cadastro.htm"><font color="#FF6600">Cadastre-se</font></a></li>
-			<li><a href="http://localhost:1313/Contato.htm"><font color="#FF6600">Contato</font></a></li>
+			<li><a href="AulasDisponiveis.htm"><font color="#FF6600">Aulas Disponíveis</font></a></li>
+			<li><a href="DuvidasFrequentes.htm"><font color="#FF6600">Duvidas Frequentes</font></a></li>
+			<li><a href="Cadastro.htm"><font color="#FF6600">Cadastre-se</font></a></li>
+			<li><a href="Contato.htm"><font color="#FF6600">Contato</font></a></li>
             <form>
                 <input type="text" id="pesquisar" value="Buscar no site" onfocus="if(this.value=='Buscar no site')this.value='';"/>
                 <font color="white"><input type="submit" class="solid" value="Pesquisar"/></font>
