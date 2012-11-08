@@ -3,14 +3,8 @@
 <html>
 
 <head>
-    <style type="text/css">
-#rodape
-	{
-		background: black;
-		color:#FF6600;
-	}
-	</style>
     <link rel="stylesheet" href="CSS/CSSReset.css" />
+    <link rel="stylesheet" href="CSS/Rodape.css" />
 </head>
 
 <body>
