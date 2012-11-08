@@ -1,4 +1,4 @@
-<? php
+<?php
 //obtém os valores digitados
 $username = $_POST["Login"];
 $senha = $_POST["Senha"];
