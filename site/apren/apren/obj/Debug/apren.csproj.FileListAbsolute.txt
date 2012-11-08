@@ -1,5 +1,0 @@
-c:\users\user\documents\visual studio 2010\Projects\apren\apren\bin\apren.dll
-c:\users\user\documents\visual studio 2010\Projects\apren\apren\bin\apren.pdb
-c:\users\user\documents\visual studio 2010\Projects\apren\apren\obj\Debug\ResolveAssemblyReference.cache
-c:\users\user\documents\visual studio 2010\Projects\apren\apren\obj\Debug\apren.dll
-c:\users\user\documents\visual studio 2010\Projects\apren\apren\obj\Debug\apren.pdb

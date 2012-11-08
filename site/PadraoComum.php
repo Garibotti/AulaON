@@ -6,7 +6,6 @@
 	<title>Aula ON</title>
     <link rel="shortcut icon" href="/Imagens/logoaulaon.png"/>
     <style type="text/css">
-	<!--
 	body {
 			padding:0px;
 			margin:0px;
@@ -48,13 +47,13 @@
 			border-bottom:3px solid #FF6600;
 		}
 		#menu li  ul{
-            top:42.7%;
+            top:25%;
             left:10%;
             display:none;
            
             padding:0px;
             width: 0px;
-            position:fixed;
+            position:absolute;
 }  
 #menu li:hover ul, .menu li.over ul{display:block;}
 #menu li ul li{
@@ -113,9 +112,49 @@ input[type="submit"].solid:active {
     -moz-box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.7), 0 0px 0 #b8882a, 0 0px 0 #593a11, 0 0px 0 #ccc;
     -webkit-box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.7), 0 0px 0 #b8882a, 0 0px 0 #593a11, 0 0px 0 #ccc;
 }
+
+#conteudo
+{
+   background: -moz-linear-gradient(top, rgba(255,167,61,0.82) 0%, rgba(255,183,107,0.27) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,167,61,0.82)), color-stop(100%,rgba(255,183,107,0.27))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(255,167,61,0.82) 0%,rgba(255,183,107,0.27) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(255,167,61,0.82) 0%,rgba(255,183,107,0.27) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(255,167,61,0.82) 0%,rgba(255,183,107,0.27) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(255,167,61,0.82) 0%,rgba(255,183,107,0.27) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1ffa73d', endColorstr='#45ffb76b',GradientType=0 ); /* IE6-9 */
+position:static;
+}
+#principal
+{
+    min-height:400px;
+    border: 1px solid #DEDEDE;
+    border-top: 0;
+	padding-top: 20px;
+	overflow: hidden;
+	background-color:White;
+	max-height:5000px;
+	max-width:1250px;
+	align:center;
+	margin-left:4%;
+	margin-bottom:1%;
+	text-align:justify;
+	position:relative;
+	
+}
+#logo
+{
+	
+    left:2%;
+	bottom:12%;
+}
+#login
+{
+	
+	left:50%;
+	bottom:12%;
+}
 	</style>
-    <link rel="stylesheet" href="CSSReset.css" />
-    <link rel="stylesheet" href="Login.css" />
+    <link rel="stylesheet" href="CSS/CSSReset.css" />
 </head>
 
 <body>
@@ -123,51 +162,46 @@ input[type="submit"].solid:active {
             <div id="topo" class="topoBranco">
                 <div id="topoCliente">
                 <!--logotipo-->
-                    <div id="logo" align="left">
-                    <a href="http://localhost:1313/Home.htm"><img border="0" src="/Imagens/aulateste4.jpg" alt="Aula On" title="Aula On" width="600" height="228"></a>
+                    <div id="logo">
+                    <a href="index.php"><img border="0" src="/Imagens/aulaon.png" alt="Aula On" title="Aula On" width="350" height="90"></a>
+                    
+                    <div id="login">
+                    <p>Seja Bem Vindo ao Aula On!<br />
+							Faça seu <a href="Login.php" title="Login" style="color:#FF6600"><strong>login</strong></a>
+							ou <a href="Cadastro.php" title="Cadastre-se" style="color:#FF6600"><strong>cadastre-se</strong></a>
+					</p>
+                    </div>
                     </div>
 		            <!--/logotipo-->
                     <!--login-->
-                    <div id="login">
-                    <p>Seja Bem Vindo ao Aula On!<br />
-							Faça seu <a href="http://localhost:1313/Login.htm" title="Login" style="color:#FF6600"><strong>login</strong></a>
-							ou <a href="http://localhost:1313/Cadastro.htm" title="Cadastre-se" style="color:#FF6600"><strong>cadastre-se</strong></a>
-					</p>
-                    </div>
+                    
                 <!--/login-->
                 </div>
             </div>
         </div>
-        <center>
+        <!--menu-->
     <div id="menu">
 		<ul>
-			<li><a href="http://localhost:1313/Home.htm"><font color="#FF6600">Home</font></a></li>
+			<li><a href="index.php"><font color="#FF6600">Home</font></a></li>
 			<li><a href=""><font color="#FF6600">Como Funciona</font></a>
             <ul>
-                <li><a href="http://localhost:1313/CFProfessor.htm"><font color="#FF6600">Professor</font></a></li>
-                <li><a href="http://localhost:1313/CFAluno.htm"><font color="#FF6600">Aluno</font></a></li>
+                <li><a href="CFProfessor.php"><font color="#FF6600">Professor</font></a></li>
+                <li><a href="CFAluno.php"><font color="#FF6600">Aluno</font></a></li>
             </ul></li>
-			<li><a href="http://localhost:1313/AulasDisponiveis.htm"><font color="#FF6600">Aulas Disponíveis</font></a></li>
-			<li><a href="http://localhost:1313/DuvidasFrequentes.htm"><font color="#FF6600">Duvidas Frequentes</font></a></li>
-			<li><a href="http://localhost:1313/Cadastro.htm"><font color="#FF6600">Cadastre-se</font></a></li>
-			<li><a href="http://localhost:1313/Contato.htm"><font color="#FF6600">Contato</font></a></li>
-            <section id="wrapper">
-            <div id="main">
+			<li><a href="AulasDisponiveis.php"><font color="#FF6600">Aulas Disponíveis</font></a></li>
+			<li><a href="DuvidasFrequentes.php"><font color="#FF6600">Duvidas Frequentes</font></a></li>
+			<li><a href="Cadastro.php"><font color="#FF6600">Cadastre-se</font></a></li>
+			<li><a href="Contato.php"><font color="#FF6600">Contato</font></a></li>
             <form>
                 <input type="text" id="pesquisar" value="Buscar no site" onfocus="if(this.value=='Buscar no site')this.value='';"/>
                 <font color="white"><input type="submit" class="solid" value="Pesquisar"/></font>
             </form>
-        </div>
-    </section>
 		</ul>
 	</div>
-    </center>
-    <br />
-    <br />
-    <br />
-    <br />
-    <p class="fonte">Primeiro site onde você pode ter aulas ao vivo com seu professor, de qualquer parte do mundo, qualquer disciplina disponível pelos professores cadastrados!</p>
-    <br />
-    <center><iframe width="400" height="300" src="http://www.youtube.com/embed/eCqFd0-PeJA" frameborder="0" allowfullscreen></iframe></center>
+    <!--/menu-->
+    <!--conteudo-->
+    <!--/conteudo-->
+    <!--rodapé-->
+    <!--/rodapé-->
 </body>
 </html>
