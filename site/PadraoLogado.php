@@ -14,13 +14,13 @@
                 <!--logotipo-->
                     <div id="logo">
                     <a href="index.php"><img border="0" src="/Imagens/aulaon.png" alt="Aula On" title="Aula On" width="350" height="90"></a>
-                    
+                    </div>
                     <div id="logoff">
                     <p>Seja Bem Vindo ao Aula On!<br />
 							Fazer <a href="index.php" title="Logoff" style="color:#FF6600"><strong>logoff</strong></a>
 					</p>
                     </div>
-                    </div>
+                    
 		            <!--/logotipo-->
                 </div>
             </div>

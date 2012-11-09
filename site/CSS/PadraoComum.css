@@ -5,6 +5,8 @@ body {
 		}
    
 		#menu ul {
+			position:absolute;
+			top:20%;
 			list-style-type:none;
 			padding:0%;
 			margin-left: 0px;
@@ -39,8 +41,8 @@ body {
 			border-bottom:3px solid #FF6600;
 		}
 		#menu li  ul{
-            top:25%;
-            left:10%;
+            top:75%;
+            left:9.8%;
             display:none;
            
             padding:0px;
@@ -114,34 +116,42 @@ background: -o-linear-gradient(top, rgba(255,167,61,0.82) 0%,rgba(255,183,107,0.
 background: -ms-linear-gradient(top, rgba(255,167,61,0.82) 0%,rgba(255,183,107,0.27) 100%); /* IE10+ */
 background: linear-gradient(to bottom, rgba(255,167,61,0.82) 0%,rgba(255,183,107,0.27) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1ffa73d', endColorstr='#45ffb76b',GradientType=0 ); /* IE6-9 */
-position:static;
+position:absolute;
+top:28%;
+width:100%;
+height:78%;
 }
 #principal
 {
-    min-height:400px;
+    min-height:75%;
     border: 1px solid #DEDEDE;
     border-top: 0;
 	padding-top: 20px;
-	overflow: hidden;
+	overflow: auto;
 	background-color:White;
-	max-height:5000px;
-	max-width:1250px;
-	align:center;
-	margin-left:4%;
-	margin-bottom:1%;
-	text-align:justify;
+	max-height:75%;
+	max-width:92%;
+	left:4%;
+	top:3%;
+	bottom:3%;
 	position:relative;
 	
 }
+#topoCliente
+{
+	width:100%;
+	height:17%;
+}
 #logo
 {
-	
-    left:2%;
-	bottom:12%;
+	position:absolute;
+ 	left:20%;
+	top:0%;
 }
 #login
 {
-	
-	left:50%;
-	bottom:12%;
+	position:absolute;
+	top:4%;
+	left:55%;
+	font-size:20px;
 }

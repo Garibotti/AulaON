@@ -26,10 +26,6 @@
 	?>
 	 <!--conteudo-->
     <div id="conteudo">
-    <br />
-    <br />
-    <br />
-    <br />
     <div id="principal">
 	Nome de Usuário ou E-mail:
     <br />
@@ -51,12 +47,11 @@
     </form> 
     <input type="submit" name="Entrar" value="Entrar" onclick="passuser()"/>
     </div>
-    <br />
     </div>
     <!--/conteudo-->
     <!--rodape-->
     <?php 
-	include("Rodape.php");
+	include("RodapeComum.php");
 	?>
     <!--/rodape-->
 </body>

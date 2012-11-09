@@ -4,10 +4,10 @@ body {
 			list-style:none;
 		}
 #menu{
+position:absolute;
+width: 11.3%;
 
-width: 150;
-
-background-color: #efefef; 
+background-color: black; 
 
 display:block;
 
@@ -21,17 +21,22 @@ font-weight:bold;
 
 color:#666666;
 
-line-height:175%; }
+line-height:175%;
+
+min-height: 80%;
+
+font-size: 19px;
+}
 
 
 
 #menu:hover{
 
-background-color: #e3eeff;
+background-color: black;
 
 display:block;
 
-padding-left:0;
+
 
 font-weight:bold;
 
@@ -50,7 +55,11 @@ background: -o-linear-gradient(top, rgba(255,167,61,0.82) 0%,rgba(255,183,107,0.
 background: -ms-linear-gradient(top, rgba(255,167,61,0.82) 0%,rgba(255,183,107,0.27) 100%); /* IE10+ */
 background: linear-gradient(to bottom, rgba(255,167,61,0.82) 0%,rgba(255,183,107,0.27) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1ffa73d', endColorstr='#45ffb76b',GradientType=0 ); /* IE6-9 */
-position:static;
+position:absolute;
+top:17%;
+left:12%;
+height:78%;
+width:88%;
 }
 #principal
 {
@@ -62,22 +71,30 @@ position:static;
 	background-color:White;
 	max-height:5000px;
 	max-width:1000px;
-	align:right;
-	margin-left:20%;
-	margin-bottom:1%;
+	align:center;
+	left:5%;
+	top:3%;
 	text-align:justify;
 	position:relative;
 	
 }
+#topoCliente
+{
+	width:100%;
+	height:17%;;
+	background:black;
+}
 #logo
 {
-	background:black;
-    left:2%;
-	bottom:12%;
+	position:absolute;
+ 	left:20%;
+	top:0%;
 }
 #logoff
 {
+	position:absolute;
 	color:white;
-	left:50%;
-	bottom:12%;
+	top:4%;
+	left:55%;
+	font-size:20px;
 }

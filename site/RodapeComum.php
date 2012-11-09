@@ -4,7 +4,7 @@
 
 <head>
     <link rel="stylesheet" href="CSS/CSSReset.css" />
-    <link rel="stylesheet" href="CSS/Rodape.css" />
+    <link rel="stylesheet" href="CSS/RodapeComum.css" />
 </head>
 
 <body>

@@ -16,17 +16,15 @@
                 <!--logotipo-->
                     <div id="logo">
                     <a href="index.php"><img border="0" src="/Imagens/aulaon.png" alt="Aula On" title="Aula On" width="350" height="90"></a>
-                    
+                    </div>
+                <!--/logotipo-->
+                <!--login-->
                     <div id="login">
                     <p>Seja Bem Vindo ao Aula On!<br />
 							Faça seu <a href="Login.php" title="Login" style="color:#FF6600"><strong>login</strong></a>
 							ou <a href="Cadastro.php" title="Cadastre-se" style="color:#FF6600"><strong>cadastre-se</strong></a>
 					</p>
                     </div>
-                    </div>
-		            <!--/logotipo-->
-                    <!--login-->
-                    
                 <!--/login-->
                 </div>
             </div>

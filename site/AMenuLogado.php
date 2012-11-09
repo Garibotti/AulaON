@@ -3,6 +3,9 @@
 <body>
 <div id="menu">
 		<ul>
+		<br />
+		<br />
+		<br />
 			<li><a href="SAluno.php"><font color="#FF6600">Home</font></a></li>
 			<li><a href="AProximaAula.php"><font color="#FF6600">Próxima Aula</font></a>
 			<li><a href="AulasDisponiveis.php"><font color="#FF6600">Aulas Disponíveis</font></a></li>

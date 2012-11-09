@@ -7,10 +7,6 @@
 	?>
 	 <!--conteudo-->
     <div id="conteudo">
-    <br />
-    <br />
-    <br />
-    <br />
     <div id="principal">
     E-mail: contato@aulaon.com.br
     <br />
@@ -19,10 +15,11 @@
     <a href=""><img border="0" src="/Imagens/imgtw.png"Pulpit rock" width="25" height="25"></a>
     <a href=""><img border="0" src="/Imagens/imgyt.png"Pulpit rock" width="25" height="25"></a>
     </div>
+    </div>
     <!--/conteudo-->
     <!--rodape-->
     <?php 
-	include("Rodape.php");
+	include("RodapeComum.php");
 	?>
     <!--/rodape-->
 </body>
