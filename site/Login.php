@@ -32,7 +32,7 @@
     <input type="text" name="Login" size="24"/><br />
     <br />
     <br />
-    Senha222:
+    Senha:
     <br /> 
     <input type="password" name="Senha" size="24"/><br />
     <br />
