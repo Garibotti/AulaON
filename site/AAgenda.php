@@ -1,5 +1,16 @@
 <html>
+ <head>
+ <link rel="stylesheet" href="CSS/CalendarioAgenda.css" />
+    <script src="Javascript/Calendario.js"></script>
+    <script src="Javascript/Calendario2.js"></script>
+ <script type="text/javascript">
+        $(function () {
+            $("#datepicker").datepicker({
 
+            });
+        });
+    </script>
+</head>
 <body>
 <?php 
 	include("PadraoLogado.php");
@@ -12,15 +23,10 @@
 	<!--conteudo-->
     <div id="conteudo">
     <div id="principal">
-    <p class="fonte">Primeiro site onde você pode ter aulas ao vivo com seu professor, de qualquer parte do mundo, qualquer disciplina disponível pelos professores cadastrados!</p>
-    <br />
-    <center><iframe width="400" height="300" src="http://www.youtube.com/embed/eCqFd0-PeJA" frameborder="0"></iframe></center>
-    </div>
-    <br />
-    
+    <div id="datepicker"></div> 
+    </div>   
     </div>
     <!--/conteudo-->
-
 	<!--rodape-->
     <?php 
 	include("Rodape.php");
