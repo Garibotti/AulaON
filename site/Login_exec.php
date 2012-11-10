@@ -26,7 +26,7 @@ $linhas = mysql_num_rows ($resultado);
 if($linhas == 0) //testa se foi encontrado um usuario com o username ou email colocado
 {	
 	//se não foi encontrado
-	header("location:Login.php/?teste=oi");
+	header("location:Login.php?teste=Usuário ou seha incorreto!");
 
 }
 
@@ -39,7 +39,9 @@ else
 		
 		if($data >= mysql_result($resultado, 0, "data_exp"))
 		{
-			//Login na tela onde deve alterar sua senha
+			
+			header("location:Troca_senha.php");
+			
 		}
 		else
 		
@@ -65,7 +67,8 @@ else
 	
 	if($sen_codificada != mysql_result($resultado, 0, "Senha")) //confere senha
 	{
-		echo "Usuario ou senha incorretos!";	
+		//se não foi encontrado
+		header("location:Login.php?teste=Usuário ou seha incorreto!");	
 	}
 	
 	else //usuario e senha corretos

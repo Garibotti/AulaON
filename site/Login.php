@@ -1,18 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<script type="text/javascript" language="javascript">
-        function passuser() 
-		{
-			location = "http://localhost/Login_exec.php";
-		}
-		
-        function alerta() 
-		{
-            alert("Burro!")
-        }
-    </script>
-</head>
 <body>
 	<?php 
 	include("PadraoComum.php");
@@ -22,22 +9,22 @@
     <div id="principal">
 	Nome de Usuário ou E-mail:
     <br />
-	<form method="POST" action="login.php" >
+	<form method="POST" action="Login_exec.php" >
     <input type="text" name="Login" size="24"/><br />
     <br />
      Senha:
     <br />
     <input type="password" name="Senha" size="24"/><br />
 	<input type="submit" value="Entrar"/>
-    <br />
-    <br /> 
     <br />  
     </form> 
     <?php
+	
+	if(isset($_GET["teste"]))
 	echo $_GET["teste"];
 	?>
 	    <br />
-    <a onclick="alerta()" href="">Esqueci minha senha</a><br />
+    <a href="Esqueci_Senha.php">Esqueci minha senha</a><br />
     </div>
     </div>
     <!--/conteudo-->
