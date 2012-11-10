@@ -33,7 +33,9 @@
     <br /> 
     <br />  
     </form> 
-    
+    <?php
+	echo $_GET["teste"];
+	?>
 	    <br />
     <a onclick="alerta()" href="">Esqueci minha senha</a><br />
     </div>

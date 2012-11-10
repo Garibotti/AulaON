@@ -20,19 +20,17 @@ $sen_codificada = md5($senha); //senha criptografada
 
 //acesso ao banco de dados
 include "conecta_mysql.php";
-$resultado = mysql_query("Select * from usuario where Email ='$username' OR Username ='$username'");
+$resultado = mysql_query("Select * from usuario where Email ='$username'");
 $linhas = mysql_num_rows ($resultado);
 
 if($linhas == 0) //testa se foi encontrado um usuario com o username ou email colocado
 {	
 	//se não foi encontrado
-	header("location: Login.htm");
-	
-		
+	header("location:Login.php/?teste=oi");
+
 }
 
 else
-
 {
 
 	if($sen_codificada == mysql_result($resultado, 0, "senha_temp")) //confere senha
@@ -74,7 +72,7 @@ else
 	{
 		setcookie("nome_usuario", $username);
 		setcookie("senha_usuario", $sen_codificada);
-		header("location: Home.php");
+		header("location: Index.php");
 		
 	}
 }
