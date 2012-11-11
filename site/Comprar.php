@@ -10,7 +10,7 @@
 	?>
 	<!--/menu-->
 	<!--conteudo-->
-    <div id="conteudo" class="conteudo">
+    <div class="conteudo">
     <div id="principal">
     	<select>
     		<?php for($i=5; $i<=500; $i++){?>

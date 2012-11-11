@@ -2,34 +2,35 @@
 <link rel="stylesheet" href="CSS/PadraoLogado.css" />
 <body>
 	<div class="sidebarmenu">
-		<a class="menuitem_red">
+		<a href="SAluno.php" class="menuitem_red">
 			<!-- <span class="accordprefix"></span> -->
 			Home
 		</a>
-		<a class="menuitem_red">
+		<a href="AProximaAula.php" class="menuitem_red">
 			<!-- <span class="accordprefix"></span> -->
 			Próxima Aula
 		</a>
-		<a class="menuitem_red">
+		<a href="AulasDisponiveis.php" class="menuitem_red">
 			<!-- <span class="accordprefix"></span> -->
 			Aulas Disponíveis
 		</a>
-		<a class="menuitem_red">
+		<a href="Comprar.php" class="menuitem_red">
 			<!-- <span class="accordprefix"></span> -->
 			Comprar
 		</a>
-		<a class="menuitem_red">
+		<a href="AAgenda.php" class="menuitem_red">
 			<!-- <span class="accordprefix"></span> -->
 			Agenda
 		</a>
-		<a class="menuitem_red">
+		<a href="AEditar.php" class="menuitem_red">
 			<!-- <span class="accordprefix"></span> -->
 			Editar
 		</a>
-		<a class="menuitem_red">
+		<a  href="AAjuda.php" class="menuitem_red">
 			<!-- <span class="accordprefix"></span> -->
 			Ajuda
 		</a>	
+		
 	</div>
 </body>
 </html>
