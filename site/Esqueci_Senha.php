@@ -29,6 +29,7 @@ include("PadraoComum.php");
 	if(isset($_GET["teste"]))
 	echo "<span  style=\"color:#FF0000;\"> ".$_GET["teste"]." </span> \n";
 	?>
+	
 	</center>
     </div>
     </div>

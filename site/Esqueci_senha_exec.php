@@ -60,7 +60,7 @@ if($num_rows != '0')
 	$data = date("dd/mm/YYYY h:i:s",strtotime("+1 day"));
 	
 	//salva no banco nova senha e temp_exp
-	$query = mysql_query ("update usuario set senha_temp = '$sen_codificada', data_exp ='$data' where email='$email'");
+	$query = mysql_query ("update usuario set senha_temp = '$sen_codificada', Data_exp =(STR_TO_DATE('$data','%d/%m/%Y %H:%i:%s')) where email='$email'");
 	
 	//enviar um email para variavel email juntamente com a variável senha;
 	$mensage ="Você solicitou a recuperação de senhha confira seu dados.";

@@ -54,12 +54,12 @@ else
 			$query = mysql_query ("update usuario set senha_temp = '$sen_codificada', Data_exp =(STR_TO_DATE('$data','%d/%m/%Y %H:%i:%s')) where email='$email'");
 	
 			//enviar um email para variavel email juntamente com a variável senha;
-			$mensage ="Você solicitou a recuperação de senhha confira seu dados.";
+			$mensage ="Sua senha temporaria expirou, confira seu novos dados.";
 			$mensage .="E-mail= " . $email;
 			$mensage .="Senha:" . $rowsenha;
 			mail($email, "Aula ON - Recuperação de Senha", $mensage);
 
-			echo"<script>alert(A senha solicitada expirou. Enviamos uma nova senha para seu email.),window.open('recuperar_senha_enviado.php','_self')</script>";
+			header("location:Login.php?teste=Sua senha expirou, foi enviado um email com uma nova senha!");
 		}		
 	}
 	
@@ -75,6 +75,7 @@ else
 	{
 		setcookie("nome_usuario", $username);
 		setcookie("senha_usuario", $sen_codificada);
+		//ver para onde vai??
 		header("location: Index.php");
 		
 	}

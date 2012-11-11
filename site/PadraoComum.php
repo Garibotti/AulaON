@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="/Imagens/logoaulaon.png"/>
     <link rel="stylesheet" href="CSS/CSSReset.css" />
     <link rel="stylesheet" href="CSS/PadraoComum.css" />
+	<script  text='javascript' src="Javascript/jquery-1.8.2.js"> </script>
 </head>
 
 <body>
