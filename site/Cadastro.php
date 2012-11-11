@@ -35,6 +35,7 @@
 	 <!--conteudo-->
     <div id="conteudo">
 	<div id="principal">
+	<div id="cadastro">
     Nome:
     <br />
     <input type="text" name="nome" size="24"/><br /><br />

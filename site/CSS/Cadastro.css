@@ -1,1 +1,49 @@
-@CHARSET "ISO-8859-1";
+#cadastro {
+    }
+ 
+input[type="text"] {
+    float: left;
+    width: 100px 5px;
+    margin-top: 1%;
+    margin-left: 01%;
+    border: 1px solid #999999;
+    color:black; 
+ 
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    
+ 
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    
+}
+ 
+input[type="submit"].solid {
+    float: left;
+    cursor: pointer;
+    width: 100px;
+    padding: 0px 0px;
+    margin-top:1%;
+    margin-left: 02%;
+    background-color: #FF6600;
+    font-weight: bold;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: inset 0 0 3px rgba(180, 5, 5, 0.6), inset 0 1px 2px rgba(180, 5, 5, 0.7), 0 0px 0 #cc0000, 0 0px 0 #593a11, 0 0px 0 #ccc;
+    -webkit-box-shadow: inset 0 0 3px rgba(180, 5, 5, 0.6), inset 0 1px 2px rgba(180, 5, 5, 0.7), 0 0px 0 #cc0000, 0 0px 0 #593a11, 0 0px 0 #ccc;
+    -webkit-transition: background 0.2s ease-out;
+}
+ 
+input[type="submit"].solid:hover, input[type="submit"].solid:focus {
+    background: #ffd842;
+    -moz-box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.9), inset 0 2px 1px rgba(255, 250, 76, 0.8), 0 0px 0 #d8a031, 0 0px 0 #593a11, 0 0px 0 #ccc;
+    -webkit-box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.9), inset 0 2px 1px rgba(255, 250, 76, 0.8), 0 0px 0 #d8a031, 0 0px 0 #593a11, 0 0px 0 #ccc;
+}
+ 
+input[type="submit"].solid:active {
+    background: #f6a000;
+    position: relative;
+    top: 1px;
+    border: 0px;
+    -moz-box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.7), 0 0px 0 #b8882a, 0 0px 0 #593a11, 0 0px 0 #ccc;
+    -webkit-box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.7), 0 0px 0 #b8882a, 0 0px 0 #593a11, 0 0px 0 #ccc;
+}

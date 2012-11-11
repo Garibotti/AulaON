@@ -4,9 +4,10 @@
 
 <head>
 	<title>Aula ON</title>
-    <link rel="shortcut icon" href="/Imagens/logoaulaon.png"/>
+    <link rel="shortcut icon" href="Imagens/logoaulaon.png"/>
     <link rel="stylesheet" href="CSS/CSSReset.css" />
     <link rel="stylesheet" href="CSS/PadraoComum.css" />
+    <link rel="stylesheet" href="CSS/BotaoPesquisar.css" />
 </head>
 
 <body>
@@ -15,7 +16,7 @@
                 <div id="topoCliente">
                 <!--logotipo-->
                     <div id="logo">
-                    <a href="index.php"><img border="0" src="/Imagens/aulaon.png" alt="Aula On" title="Aula On" width="350" height="90"></a>
+                    <a href="index.php"><img border="0" src="Imagens/aulaon.png" alt="Aula On" title="Aula On" width="350" height="90"></a>
                     </div>
                 <!--/logotipo-->
                 <!--login-->
