@@ -9,13 +9,21 @@ body {
 			top:20%;
 			list-style-type:none;
 			padding:0%;
-			margin-left: 0px;
+			margin-left: 0%;
 			float:left;
 			width: 100%;
-			background-color:#282828;
+			background: #e5e5e5; /* Old browsers */
+	background: -moz-linear-gradient(top,  #e5e5e5 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e5e5e5 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e5e5e5 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e5e5e5 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e5e5e5 0%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 			font:80% Tahoma;
 			-webkit-border-radius:0px;
             -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            color:white;
 
 		}
 
@@ -36,19 +44,11 @@ body {
 		}
 
 		#menu ul li a:hover {
-			background-color:#383838;
-			color: #6D6D6D;
+			background:url(../Imagens_Adm_Aluno/red_bt_a.gif) no-repeat center top;
+			color: white;
 			border-bottom:3px solid #FF6600;
 		}
-		#menu li  ul{
-            top:75%;
-            left:9.8%;
-            display:none;
-           
-            padding:0px;
-            width: 0px;
-            position:absolute;
-}  
+ 
 #menu li:hover ul, .menu li.over ul{display:block;}
 #menu li ul li{
 

@@ -2,7 +2,7 @@
 
 	<head>
 	<title> Aula On </title>
-	<link rel="shortcut icon" href="/Imagens/logoaulaon.png"/>
+	<link rel="shortcut icon" href="Imagens/logoaulaon.png"/>
     <link rel="stylesheet" href="CSS/CSSReset.css" />
     <link rel="stylesheet" href="CSS/PadraoLogado.css" />
     </head>
@@ -13,7 +13,7 @@
                 <div id="topoCliente">
                 <!--logotipo-->
                     <div id="logo">
-                    <a href="index.php"><img border="0" src="/Imagens/aulaon.png" alt="Aula On" title="Aula On" width="350" height="90"></a>
+                    <a href="index.php"><img border="0" src="Imagens/aulaon.png" alt="Aula On" title="Aula On" width="350" height="90"></a>
                     </div>
                     <div id="logoff">
                     <p>Seja Bem Vindo ao Aula On!<br />

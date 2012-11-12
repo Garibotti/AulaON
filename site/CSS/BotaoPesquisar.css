@@ -2,7 +2,7 @@
     #menu {
     }
  
-input[type="text"] {
+input[type="text"].pesquisar {
     float: left;
     width: 100px 5px;
     margin-top: 1%;

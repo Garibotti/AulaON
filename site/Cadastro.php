@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="CSS/Calendario.css" />
     <script src="Javascript/Calendario.js"></script>
     <script src="Javascript/Calendario2.js"></script>
+    <link rel="stylesheet" href="CSS/Cadastro.css" />
+    <script type="text/javascript" src="Javascript/cidades-estados-v0.2.js"></script>
     <script type="text/javascript" >
         function formatar(mascara, documento) {
             var i = documento.value.length;
@@ -27,6 +29,15 @@
             });
         });
     </script>
+    <script type="text/javascript">
+    window.onload = function() {
+        new dgCidadesEstados(
+            document.getElementById('estado'),
+            document.getElementById('cidade'),
+            true
+        );
+    }
+</script>
 </head>
 <body>
 	<?php 
@@ -35,103 +46,145 @@
 	 <!--conteudo-->
     <div id="conteudo">
 	<div id="principal">
-	<div id="cadastro">
+	<div class="contact_form">
+	<div class="form_subtitle">Crie seu novo cadastro</div>
 	<form method="POST" action="Cadastro_exec.php" >
-    Nome:
-    <br />
-    <input type="text" name="nome" size="24"/><br /><br />
-    <br />
-    Sobrenome:
-    <br />
-    <input type="text" name="sobrenome" size="24"/><br /><br />
-    <br />
-    Data de Nascimento:
-    <br />
-    <input type="text" id="datepicker" maxlength="10" onkeypress="formatar('##/##/####', this)"/><br /><br />
-    <br />
-    <input type="radio" name="sexo" value="masculino" checked="checked"/>Masculino <br />
-    <br />
-    <input type="radio" name="sexo" value="feminino"/>Feminino<br />
-    <br /> 
-    <br />  
-    CPF:
-    <br />
+	
+	<div class="form_row">
+    <label class="contact"><strong>Nome:</strong></label>
+    <input type="text" class="contact_input" />
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Sobrenome:</strong></label>
+    <input class="contact_input" type="text" name="sobrenome" size="24"/>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Data de nascimento:</strong></label>
+    <input class="contact_input" type="text" id="datepicker" maxlength="10" onkeypress="formatar('##/##/####', this)"/>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Sexo:</strong></label>
+    <select name='sexo'>
+    <option class="contact_input"  name="sexo" value="001" style="margin-left:30%;"/>Masculino</option>
+   	<option class="contact_input"  name="sexo" value="002" style="margin-left:30%;"/>Feminino</option>
+    </select>
+    </div>
+    
+    <div class="form_row">  
+    <label class="contact"><strong>CPF:</strong></label>
     <form name="frmcpf" method="post" action="default.php" onsubmit="VerificaCPF();">
-    <input type="text" name="cpf" maxlength="11" onkeypress="formatar('###########', this)"/></form><br /><br />
-    <br />
-    RG:
-    <br />
-    <input type="text" name="rg" size="24"/><br /><br />
-    <br />
-    País:
-    <br />
-    <input type="text" name="pais" size="24"/><br /><br />
-    <br />
-    UF:
-    <br />
-	<input type="text" name="uf" size="24"/><br /><br />
-    <br />
-    CEP:
-    <br />
-	<input type="text" name="cep" maxlength="9" onkeypress="formatar('#####-###', this)"/><br /><br />
-    <br />
-    Cidade:
-    <br />
-	<input type="text" name="cidade" size="24"/><br /><br />
-    <br />
-    Endereço:
-    <br />
-	<input type="text" name="endereço" size="24"/><br /><br />
-    <br />
-    Complemento:
-    <br />
-	<input type="text" name="complementoEndereço" size="24"/><br /><br />
-    <br />
-    Bairro:
-    <br />
-	<input type="text" name="bairro" size="24"/><br /><br />
-    <br />
-    E-mail:
-    <br />
-	<input type="text" name="email" size="24"/><br /><br />
-    <br />
-    Telefone:
-    <br />
-	<input type="text" name="telefone" maxlength="12" onkeypress="formatar('##-####-####', this)"/><br /><br />
-    <br />
-    Celular:
-    <br />
-	<input type="text" name="celular" maxlength="12" onkeypress="formatar('##-####-####', this)"/><br /><br />
-    <br />
-    Banco:
-    <br />
-	<input type="text" name="banco" size="24"/><br /><br />
-    <br />
-    Agência:
-    <br />
-	<input type="text" name="agenciaBanco" size="24"/><br /><br />
-    <br />
-    Conta Corrente:
-    <br />
-	<input type="text" name="contacorrente" size="24"/><br /><br />
-    <br />
-     Nome de Usuário:
-    <br />
-	<input type="text" name="usuario" size="24"/><br /><br />
-    <br />
-     Senha:
-    <br /> 
-	<input type="password" name="senha" size="24"/><br /><br />
-    <br />
-     Confirmar Senha:
-    <br /> 
-	<input type="password" name="confirmarsenha" size="24"/><br /><br />
-    <br />
-	<input type="submit" name="enviar" value="Enviar" onclick="VerificaCPF()"/>
-	<input type="reset" value="Limpar"/>
+    <input class="contact_input" type="text" name="cpf" maxlength="11" onkeypress="formatar('###########', this)"/></form>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>RG:</strong></label>
+    <input class="contact_input" type="text" name="rg" size="24"/>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>País:</strong></label>
+    <select name='sexo'>
+    <option class="contact_input"  name="pais" value="001" style="margin-left:30%;"/>Brasil</option>
+    </select>
+    </div>
+    
+    <div class="form_row">
+    <fieldset>
+	<label class="contact"><strong>UF:</strong></label>
+	<select id="estado" name="estado"></select>
+	</fieldset>
+    </div>
+    
+    <div class="form_row">
+    <fieldset>
+    <label class="contact"><strong>Cidade:</strong></label>
+	<select id="cidade" name="cidade"></select>
+	</fieldset>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>CEP:</strong></label>
+	<input class="contact_input" type="text" name="cep" maxlength="9" onkeypress="formatar('#####-###', this)"/>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Endereço:</strong></label>
+	<input class="contact_input" type="text" name="endereço" size="24"/>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Complemento:</strong></label>
+	<input  class="contact_input"type="text" name="complementoEndereço" size="24"/>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Bairro:</strong></label>
+	<input class="contact_input" type="text" name="bairro" size="24"/>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>E-mail:</strong></label>
+	<input  class="contact_input"type="text" name="email" size="24"/>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Fone (DDD):</strong></label>
+	<input class="contact_input" type="text" name="telefone" maxlength="12" onkeypress="formatar('##-####-####', this)"/>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Cel (DDD):</strong></label>
+	<input class="contact_input" type="text" name="celular" maxlength="12" onkeypress="formatar('##-####-####', this)"/>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Banco:</strong></label>
+	<input class="contact_input" type="text" name="banco" size="24"/>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Agência:</strong></label>
+	<input class="contact_input" type="text" name="agenciaBanco" size="24"/>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Conta Corrente:</strong></label>
+	<input class="contact_input" type="text" name="contacorrente" size="24"/>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Nome de usuário:</strong></label>
+   	<input class="contact_input" type="text" name="usuario" size="24"/>
+   	</div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Senha:</strong></label>
+    <input class="contact_input" type="password" name="senha" size="24"/>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Confirmar senha:</strong></label>
+ 	<input class="contact_input" type="password" name="confirmarsenha" size="24"/>
+    </div>
+	
+	<div class="form_row">
+    <div class="terms">
+    <input type="checkbox" name="terms" />
+              Eu concordo com os <a href="#">Termos &amp; Condições</a>                        
+    </div>
+    </div> 
+	
+	<div class="form_row">
+	<input class="register" type="submit" value="Enviar" onclick="VerificaCPF()"/>
+	</div>
+	
 	</form> 
-    </div>
-    </div>
+	</div>
+	</div>
+	</div>
     <!--/conteudo-->
     <!--rodape-->
     <?php 
