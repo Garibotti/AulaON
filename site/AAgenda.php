@@ -21,7 +21,7 @@
 	?>
 	<!--/menu-->
 	<!--conteudo-->
-    <div id="conteudo">
+    <div class="conteudo">
     <div id="principal">
     <div id="datepicker"></div> 
     </div>   

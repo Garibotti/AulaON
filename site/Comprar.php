@@ -10,11 +10,14 @@
 	?>
 	<!--/menu-->
 	<!--conteudo-->
-    <div id="conteudo">
+    <div class="conteudo">
     <div id="principal">
-    <p class="fonte">Primeiro site onde você pode ter aulas ao vivo com seu professor, de qualquer parte do mundo, qualquer disciplina disponível pelos professores cadastrados!</p>
-    <br />
-    <center><iframe width="400" height="300" src="http://www.youtube.com/embed/eCqFd0-PeJA" frameborder="0"></iframe></center>
+    	<select>
+    		<?php for($i=5; $i<=500; $i++){?>
+    			<option value="<?php echo $i?>"> R$ <?php echo $i?> </option>
+    		<?php }?>
+    	</select>
+    	<img class="none" title="botao_comprar" src="Imagens_Adm_Aluno/botao_comprar.gif" alt="Comprar">
     </div>
     <br />
     

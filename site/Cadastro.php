@@ -36,6 +36,7 @@
     <div id="conteudo">
 	<div id="principal">
 	<div id="cadastro">
+	<form method="POST" action="Cadastro_exec.php" >
     Nome:
     <br />
     <input type="text" name="nome" size="24"/><br /><br />
@@ -128,6 +129,7 @@
     <br />
 	<input type="submit" name="enviar" value="Enviar" onclick="VerificaCPF()"/>
 	<input type="reset" value="Limpar"/>
+	</form> 
     </div>
     </div>
     <!--/conteudo-->

@@ -1,19 +1,36 @@
 <html>
-
+<link rel="stylesheet" href="CSS/PadraoLogado.css" />
 <body>
-<div id="menu">
-		<ul>
-		<br />
-		<br />
-		<br />
-			<li><a href="SAluno.php"><font color="#FF6600">Home</font></a></li>
-			<li><a href="AProximaAula.php"><font color="#FF6600">Próxima Aula</font></a>
-			<li><a href="AulasDisponiveis.php"><font color="#FF6600">Aulas Disponíveis</font></a></li>
-			<li><a href="Comprar.php"><font color="#FF6600">Comprar</font></a></li>
-			<li><a href="AAgenda.php"><font color="#FF6600">Agenda</font></a></li>
-			<li><a href="AEditar.php"><font color="#FF6600">Editar</font></a></li>
-			<li><a href="AAjuda.php"><font color="#FF6600">Ajuda</font></a></li>
-		</ul>
+	<div class="sidebarmenu">
+		<a href="SAluno.php" class="menuitem_red">
+			<!-- <span class="accordprefix"></span> -->
+			Home
+		</a>
+		<a href="AProximaAula.php" class="menuitem_red">
+			<!-- <span class="accordprefix"></span> -->
+			Próxima Aula
+		</a>
+		<a href="AulasDisponiveis.php" class="menuitem_red">
+			<!-- <span class="accordprefix"></span> -->
+			Aulas Disponíveis
+		</a>
+		<a href="Comprar.php" class="menuitem_red">
+			<!-- <span class="accordprefix"></span> -->
+			Comprar
+		</a>
+		<a href="AAgenda.php" class="menuitem_red">
+			<!-- <span class="accordprefix"></span> -->
+			Agenda
+		</a>
+		<a href="AEditar.php" class="menuitem_red">
+			<!-- <span class="accordprefix"></span> -->
+			Editar
+		</a>
+		<a  href="AAjuda.php" class="menuitem_red">
+			<!-- <span class="accordprefix"></span> -->
+			Ajuda
+		</a>	
+		
 	</div>
 </body>
 </html>

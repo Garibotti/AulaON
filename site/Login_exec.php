@@ -26,7 +26,7 @@ $linhas = mysql_num_rows ($resultado);
 if($linhas == 0) //testa se foi encontrado um usuario com o username ou email colocado
 {	
 	//se não foi encontrado
-	header("location:Login.php/?teste=oi");
+	header("location:Login.php?teste=Usuário ou seha incorreto!");
 
 }
 
@@ -39,7 +39,9 @@ else
 		
 		if($data >= mysql_result($resultado, 0, "data_exp"))
 		{
-			//Login na tela onde deve alterar sua senha
+			
+			header("location:Troca_senha.php");
+			
 		}
 		else
 		
@@ -52,12 +54,12 @@ else
 			$query = mysql_query ("update usuario set senha_temp = '$sen_codificada', Data_exp =(STR_TO_DATE('$data','%d/%m/%Y %H:%i:%s')) where email='$email'");
 	
 			//enviar um email para variavel email juntamente com a variável senha;
-			$mensage ="Você solicitou a recuperação de senhha confira seu dados.";
+			$mensage ="Sua senha temporaria expirou, confira seu novos dados.";
 			$mensage .="E-mail= " . $email;
 			$mensage .="Senha:" . $rowsenha;
 			mail($email, "Aula ON - Recuperação de Senha", $mensage);
 
-			echo"<script>alert(A senha solicitada expirou. Enviamos uma nova senha para seu email.),window.open('recuperar_senha_enviado.php','_self')</script>";
+			header("location:Login.php?teste=Sua senha expirou, foi enviado um email com uma nova senha!");
 		}		
 	}
 	
@@ -65,13 +67,15 @@ else
 	
 	if($sen_codificada != mysql_result($resultado, 0, "Senha")) //confere senha
 	{
-		echo "Usuario ou senha incorretos!";	
+		//se não foi encontrado
+		header("location:Login.php?teste=Usuário ou seha incorreto!");	
 	}
 	
 	else //usuario e senha corretos
 	{
 		setcookie("nome_usuario", $username);
 		setcookie("senha_usuario", $sen_codificada);
+		//ver para onde vai??
 		header("location: Index.php");
 		
 	}
