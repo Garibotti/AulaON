@@ -2,8 +2,7 @@
 
 <html>
 
-<head>
-    <link rel="stylesheet" href="CSS/CSSReset.css" />
+<head>    
     <link rel="stylesheet" href="CSS/Rodape.css" />
 </head>
 
