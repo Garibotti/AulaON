@@ -32,7 +32,7 @@
 	?>
 	 <!--conteudo-->
     <div class="conteudo">
-	<div id="principal">
+	<div class="principal">
 	<div class="contact_form">
 	<div class="form_subtitle">Crie seu novo cadastro</div>
 	<form method="POST" action="Cadastro_exec.php" >

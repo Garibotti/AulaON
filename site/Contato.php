@@ -7,7 +7,7 @@
 	?>
 	 <!--conteudo-->
     <div class="conteudo">
-    <div id="principal">
+    <div class="principal">
     E-mail: contato@aulaon.com.br
     <br />
     <br />

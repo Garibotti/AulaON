@@ -5,8 +5,8 @@
 	include("PadraoComum.php");
 	?>
 	 <!--conteudo-->
-    <div id="conteudo">
-    <div id="principal">
+    <div class="conteudo">
+    <div class="principal">
 	Nome de Usuário ou E-mail:
     <br />
 	<form method="POST" action="Login_exec.php" >

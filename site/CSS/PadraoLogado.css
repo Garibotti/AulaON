@@ -47,7 +47,7 @@ body {
 	height:78%;
 	width:80%;
 }
-#principal
+.principal
 {
 	background: #e5e5e5; /* Old browsers */
 	background: -moz-linear-gradient(top,  #e5e5e5 0%, #ffffff 100%); /* FF3.6+ */

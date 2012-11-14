@@ -15,9 +15,9 @@
             <td>
 			<h4>Institucional</h4>
 			<ul>
-								<li><a href="">Como Funciona</a></li>
-								<li><a href="">Política de Privacidade</a></li>
-								<li><a href="">Dúvidas Frequentes</a></li>
+								<li><a href="ComoFunciona.php">Como Funciona</a></li>
+								<li><a href="PoliticaPrivacidade.php">Política de Privacidade</a></li>
+								<li><a href="DuvidasFrequentes.php">Dúvidas Frequentes</a></li>
 			</ul>
             </td>
             </table>
