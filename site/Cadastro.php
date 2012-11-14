@@ -44,12 +44,12 @@
     
     <div class="form_row">
     <label class="contact"><strong>Sobrenome:</strong></label>
-    <input class="contact_input" type="text" name="sobrenome"/>
+    <input class="contact_input" type="text" name="sobrenome" id="sobrenome" size="24" onkeyup="validarSNome();"/>
     </div>
     
     <div class="form_row">
     <label class="contact"><strong>Data de nascimento:</strong></label>
-    <input class="contact_input" type="text"  maxlength="10" onkeypress="formatar('##/##/####', this)"/>
+    <input class="contact_input" type="text" name="dn" id="dn" maxlength="10" onkeypress="formatar('##-##-####', this)" onkeyup="validarDN();"/>
     </div>
     
     <div class="form_row">
