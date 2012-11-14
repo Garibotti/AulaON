@@ -37,7 +37,7 @@
             true
         );
     }
-</script>
+</script>	
 </head>
 <body>
 	<?php 
@@ -52,18 +52,24 @@
 	
 	<div class="form_row">
     <label class="contact"><strong>Nome:</strong></label>
-    <input type="text" class="contact_input" />
-    </div>
+    <input type="text" class="contact_input" name="nome" id="nome" onkeyup="validarNome();"/>
+	</div>
+	<div  class="contact_input" id="testa_nome" >
+	</div>
+	
     
     <div class="form_row">
     <label class="contact"><strong>Sobrenome:</strong></label>
-    <input class="contact_input" type="text" name="sobrenome" size="24"/>
+    <input class="contact_input" type="text" name="sobrenome" id="sobrenome" size="24" onkeyup="validarSNome();"/>
     </div>
+	<div  class="contact_input" id="testa_snome" >
+	</div>
     
     <div class="form_row">
     <label class="contact"><strong>Data de nascimento:</strong></label>
-    <input class="contact_input" type="text" id="datepicker" maxlength="10" onkeypress="formatar('##/##/####', this)"/>
+    <input class="contact_input" type="text" name="dn" id="dn" maxlength="10" onkeypress="formatar('##-##-####', this)" onkeyup="validarDN();"/>
     </div>
+	
     
     <div class="form_row">
     <label class="contact"><strong>Sexo:</strong></label>
@@ -75,9 +81,10 @@
     
     <div class="form_row">  
     <label class="contact"><strong>CPF:</strong></label>
-    <form name="frmcpf" method="post" action="default.php" onsubmit="VerificaCPF();">
-    <input class="contact_input" type="text" name="cpf" maxlength="11" onkeypress="formatar('###########', this)"/></form>
+    <input class="contact_input" type="text" name="cpf" id="cpf" maxlength="11" onkeypress="return SomenteNumero(cpf);" onkeyup="ValidarCPF(cpf);" /></form>
     </div>
+	<div  class="contact_input" id="testa_cpf" >
+	</div>
     
     <div class="form_row">
     <label class="contact"><strong>RG:</strong></label>
@@ -193,3 +200,96 @@
     <!--/rodape-->
 </body>
 </html>
+ <script>
+	function validarNome(){	
+	jQuery(document).ready(function($) {
+		if( jQuery("#nome").val() == '' )
+		{
+			document.getElementById("testa_nome").innerHTML = '<img src="Imagens/error.png">Inválido. ';
+			return false;
+		}
+		
+		else
+		{
+			document.getElementById("testa_nome").innerHTML = '';
+			return false;
+		}
+	});
+
+}
+
+function validarSNome(){	
+	jQuery(document).ready(function($) {
+		if( jQuery("#sobrenome").val() == '' )
+		{
+			document.getElementById("testa_snome").innerHTML = '<img src="Imagens/error.png">Inválido. ';
+			return false;
+		}
+		
+		else
+		{
+			document.getElementById("testa_snome").innerHTML = '';
+			return false;
+		}
+	});
+
+}
+
+function validarDN(){	
+	jQuery(document).ready(function($) {
+		var dn = jQuery("#dn").val();
+		var quebra_dn = dn.split("-");
+		
+		if(quebra_dn[0] > 31 || quebra_dn[1] > 12 || quebra_dn[2].lenght != 4)
+		{
+			document.getElementById("testa_dn").innerHTML = '<img src="Imagens/error.png">Inválido. ';
+			return false;
+		}
+		
+		else
+		{
+			document.getElementById("testa_dn").innerHTML = dn;
+			return false;
+		}
+		
+	});
+
+}
+
+function SomenteNumero(e){
+ var tecla=(window.event)?event.keyCode:e.which;
+ if((tecla>47 && tecla<58)) return tecla;
+ else{
+ if (tecla==8 || tecla==0) return tecla;
+ else  return false;
+ }
+}
+
+function ValidarCPF(Objcpf){
+        var cpf = Objcpf.value;
+        exp = /\.|\-/g
+        cpf = cpf.toString().replace( exp, "" );
+        var digitoDigitado = eval(cpf.charAt(9)+cpf.charAt(10));
+        var soma1=0, soma2=0;
+        var vlr =11;
+        for(i=0;i<9;i++){
+                soma1+=eval(cpf.charAt(i)*(vlr-1));
+                soma2+=eval(cpf.charAt(i)*vlr);
+                vlr--;
+        }      
+        soma1 = (((soma1*10)%11)==10 ? 0:((soma1*10)%11));
+        soma2=(((soma2+(2*soma1))*10)%11);      
+        var digitoGerado=(soma1*10)+soma2;
+        if(digitoGerado!=digitoDigitado)       
+        {	
+			document.getElementById("testa_cpf").innerHTML = '<img src="Imagens/error.png">Inválido. ';
+			return false;
+		}
+		
+		else
+		{
+			document.getElementById("testa_cpf").innerHTML = ' ';
+			return false;
+		}
+}
+</script>
