@@ -2,10 +2,6 @@
 
 <html>
 <head>
-	<script src="Javascript/VerificaCPF.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="CSS/Calendario.css" />
-    <script src="Javascript/Calendario.js"></script>
-    <script src="Javascript/Calendario2.js"></script>
     <link rel="stylesheet" href="CSS/Cadastro.css" />
     <script type="text/javascript" src="Javascript/cidades-estados-v0.2.js"></script>
     <script type="text/javascript" >
@@ -19,15 +15,6 @@
             }
         }
 
-    </script>
-    <script type="text/javascript">
-        $(function () {
-            $("#datepicker").datepicker({
-                changeMonth: true,
-                changeYear: true,
-
-            });
-        });
     </script>
     <script type="text/javascript">
     window.onload = function() {
@@ -44,7 +31,7 @@
 	include("PadraoComum.php");
 	?>
 	 <!--conteudo-->
-    <div id="conteudo">
+    <div class="conteudo">
 	<div id="principal">
 	<div class="contact_form">
 	<div class="form_subtitle">Crie seu novo cadastro</div>
@@ -57,12 +44,12 @@
     
     <div class="form_row">
     <label class="contact"><strong>Sobrenome:</strong></label>
-    <input class="contact_input" type="text" name="sobrenome" size="24"/>
+    <input class="contact_input" type="text" name="sobrenome"/>
     </div>
     
     <div class="form_row">
     <label class="contact"><strong>Data de nascimento:</strong></label>
-    <input class="contact_input" type="text" id="datepicker" maxlength="10" onkeypress="formatar('##/##/####', this)"/>
+    <input class="contact_input" type="text"  maxlength="10" onkeypress="formatar('##/##/####', this)"/>
     </div>
     
     <div class="form_row">
@@ -178,7 +165,7 @@
     </div> 
 	
 	<div class="form_row">
-	<input class="register" type="submit" value="Enviar" onclick="VerificaCPF()"/>
+	<input class="register" type="submit" value="Enviar" onclick=""/>
 	</div>
 	
 	</form> 

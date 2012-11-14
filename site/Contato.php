@@ -6,7 +6,7 @@
 	include("PadraoComum.php");
 	?>
 	 <!--conteudo-->
-    <div id="conteudo">
+    <div class="conteudo">
     <div id="principal">
     E-mail: contato@aulaon.com.br
     <br />
