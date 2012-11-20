@@ -4,7 +4,7 @@
 
 <head>
 	<title>Aula ON</title>
-    <link rel="shortcut icon" href="Imagens/logoaulaon.png"/>
+    <link rel="shortcut icon" href="Imagens/logoaulaonn.ico">
     <link rel="stylesheet" href="CSS/CSSReset.css" />
     <link rel="stylesheet" href="CSS/PadraoComum.css" />
     <link rel="stylesheet" href="CSS/BotaoPesquisar.css" />
