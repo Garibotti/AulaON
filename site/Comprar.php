@@ -11,7 +11,7 @@
 	<!--/menu-->
 	<!--conteudo-->
     <div class="conteudo">
-    <div id="principal">
+    <div class="principal">
     	<h2>Compre créditos e veja sua informações referentes a compras</h2>    	
     	<div class="NFSelect" style="z-index: 999;">
     		<img src="imagens_adm_aluno/0.png" class="NFSelectLeft">

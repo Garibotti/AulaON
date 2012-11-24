@@ -4,8 +4,8 @@
 
 include("PadraoComum.php");
 ?>
-    <div id="conteudo">
-    <div id="principal">
+    <div class="conteudo">
+    <div class="principal">
 	<br>
 	<br>
 	<br>

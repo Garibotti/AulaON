@@ -4,7 +4,7 @@
 
 <head>
 	<title>Aula ON</title>
-    <link rel="shortcut icon" href="Imagens/logoaulaon.png"/>
+    <link rel="shortcut icon" href="Imagens/logoaulaonn.ico">
     <link rel="stylesheet" href="CSS/CSSReset.css" />
     <link rel="stylesheet" href="CSS/PadraoComum.css" />
     <link rel="stylesheet" href="CSS/BotaoPesquisar.css" />
@@ -16,12 +16,12 @@
                 <div class="topoCliente">
                 <!--logotipo-->
                     <div id="logo">
-                    <a href="index.php"><img border="0" src="Imagens/aulaon.png" alt="Aula On" title="Aula On" width="350" height="90"></a>
+                    <a href="index.php"><img border="0" src="Imagens/aulaon.png" alt="Aula On" title="Aula ON" width="350" height="90"></a>
                     </div>
                 <!--/logotipo-->
                 <!--login-->
                     <div id="login">
-                    <p>Seja Bem Vindo ao Aula On!<br />
+                    <p>Seja Bem Vindo ao Aula ON!<br />
 							Faça seu <a href="Login.php" title="Login" style="color:#FF6600"><strong>login</strong></a>
 							ou <a href="Cadastro.php" title="Cadastre-se" style="color:#FF6600"><strong>cadastre-se</strong></a>
 					</p>

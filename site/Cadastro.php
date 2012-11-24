@@ -29,6 +29,7 @@
     }
 </script>
 
+
 <script type="text/javascript">
 			$(document).ready(function(){
 				$('#cadastro').validate({
@@ -53,6 +54,19 @@
 		</script>
 
    
+
+<script>
+    $(function() {
+        $( "#datepicker" ).datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+    });
+    </script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+
 </head>
 <body>
 	<?php 
@@ -60,7 +74,7 @@
 	?>
 	 <!--conteudo-->
     <div class="conteudo">
-	<div id="principal">
+	<div class="principal">
 	<div class="contact_form">
 	<div class="form_subtitle">Crie seu novo cadastro</div>
 	<form method="POST" id="cadastro" action="" >
@@ -77,7 +91,7 @@
     
     <div class="form_row">
     <label class="contact"><strong>Data de nascimento:</strong></label>
-    <input class="contact_input" type="text" name="dn" id="dn" maxlength="10" onkeypress="formatar('##-##-####', this)" onkeyup="validarDN();"/>
+    <input class="contact_input" type="text" id="datepicker" maxlength="10" onkeypress="formatar('##-##-####', this)" onkeyup="validarDN();"/>
     </div>
     
     <div class="form_row">
@@ -146,12 +160,12 @@
     
     <div class="form_row">
     <label class="contact"><strong>Fone (DDD):</strong></label>
-	<input class="contact_input" type="text" name="telefone" maxlength="12" onkeypress="formatar('##-####-####', this)"/>
+	<input class="contact_input" type="text" name="telefone" maxlength="11" onkeypress="formatar('##-########', this)"/>
     </div>
     
     <div class="form_row">
     <label class="contact"><strong>Cel (DDD):</strong></label>
-	<input class="contact_input" type="text" name="celular" maxlength="12" onkeypress="formatar('##-####-####', this)"/>
+	<input class="contact_input" type="text" name="celular" maxlength="12" onkeypress="formatar('##-#########', this)"/>
     </div>
     
     <div class="form_row">
@@ -187,7 +201,7 @@
 	<div class="form_row">
     <div class="terms">
     <input type="checkbox" name="terms" />
-              Eu concordo com os <a href="#">Termos &amp; Condições</a>                        
+              Eu concordo com os <a href="TermosCondicoes.php">Termos &amp; Condições</a>                        
     </div>
     </div> 
 	

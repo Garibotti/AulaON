@@ -15,9 +15,9 @@
             <td>
 			<h4>Institucional</h4>
 			<ul>
-								<li><a href="">Como Funciona</a></li>
-								<li><a href="">Política de Privacidade</a></li>
-								<li><a href="">Dúvidas Frequentes</a></li>
+								<li><a style="color:#FF6600" href="ComoFunciona.php">Como Funciona</a></li>
+								<li><a style="color:#FF6600" href="PoliticaPrivacidade.php">Política de Privacidade</a></li>
+								<li><a style="color:#FF6600" href="DuvidasFrequentes.php">Dúvidas Frequentes</a></li>
 			</ul>
             </td>
             </table>
@@ -27,9 +27,9 @@
             <td>
             <h5>Fale conosco:</h5>
 				
-					<a href="mailto:contato@aulaon.com.br">
+					<a style="color:#FF6600" href="mailto:contato@aulaon.com.br">
 						contato@aulaon.com.br					</a>
-				
+				<br><br>
 				<h4>Formas de Pagamento</h4>
 					<ul>
 						<img src="Imagens/imgBoleto.jpg" alt="Boleto" title="Boleto"/>
