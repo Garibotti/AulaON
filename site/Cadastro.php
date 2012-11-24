@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="CSS/Cadastro.css" />
 	<link rel="stylesheet" href="CSS/style.css" />
     <script type="text/javascript" src="Javascript/cidades-estados-v0.2.js"></script>
-	<script src="Javascript/jquery.validate.js" ></script>
+	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+	<script type="text/javascript" src="JavaScript/jquery.validate.js"></script>
+
 	<script type="text/javascript">
         function formatar(mascara, documento) {
             var i = documento.value.length;
@@ -39,8 +41,7 @@
     });
     </script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
-    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script> 
 	
 <style type="text/css">
 * { font-family: Verdana; font-size: 96%; }
@@ -65,7 +66,7 @@ em { font-weight: bold; padding-right: 1em; vertical-align: top; }
 	<div class="contact_form">
 	<div class="form_subtitle">Crie seu novo cadastro</div>
 	<form method="POST" id="cadastro" action="" >
-	
+    
 	<div class="form_row">
     <label class="contact"><strong>Nome:</strong></label>
     <input type="text" name="nome" id="nome" class="contact_input required"/>
@@ -140,10 +141,7 @@ em { font-weight: bold; padding-right: 1em; vertical-align: top; }
 	<input class="contact_input" type="text" name="bairro" size="24"/>
     </div>
     
-    <div class="form_row">
-    <label class="contact"><strong>E-mail:</strong></label>
-	<input  class="contact_input"type="text" name="email" id="email" size="24"/>
-    </div>
+
     
     <div class="form_row">
     <label class="contact"><strong>Fone (DDD):</strong></label>
