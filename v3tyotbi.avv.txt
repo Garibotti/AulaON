@@ -12,5 +12,5 @@
 #	modified:   site/PadraoComum.php
 #	modified:   site/Rodape.php
 #	modified:   site/RodapeComum.php
-#
+#teste
 

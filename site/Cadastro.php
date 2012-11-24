@@ -3,8 +3,11 @@
 <html>
 <head>
     <link rel="stylesheet" href="CSS/Cadastro.css" />
+	<link rel="stylesheet" href="CSS/style.css" />
     <script type="text/javascript" src="Javascript/cidades-estados-v0.2.js"></script>
-    <script type="text/javascript" >
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" ></script>
+	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.6/jquery.validate.js" ></script>
+	<script type="text/javascript">
         function formatar(mascara, documento) {
             var i = documento.value.length;
             var saida = mascara.substring(0, 1);
@@ -25,6 +28,31 @@
         );
     }
 </script>
+
+<script type="text/javascript">
+			$(document).ready(function(){
+				$('#cadastro').validate({
+					rules:{ 
+						nome:{ 
+							required: true,
+						},
+						email: {
+							required: true,
+							email: true
+						}
+					},
+					 messages: ,
+  success: function(label) {
+    label
+      .addClass('valid')
+      .closest('.form_row').addClass('success');
+  }
+					
+				});
+			});
+		</script>
+
+   
 </head>
 <body>
 	<?php 
@@ -35,11 +63,11 @@
 	<div id="principal">
 	<div class="contact_form">
 	<div class="form_subtitle">Crie seu novo cadastro</div>
-	<form method="POST" action="Cadastro_exec.php" >
+	<form method="POST" id="cadastro" action="" >
 	
 	<div class="form_row">
     <label class="contact"><strong>Nome:</strong></label>
-    <input type="text" class="contact_input" />
+    <input type="text" name="nome" id="nome" class="contact_input" onblur="Valida_nome();"/>
     </div>
     
     <div class="form_row">
@@ -55,15 +83,14 @@
     <div class="form_row">
     <label class="contact"><strong>Sexo:</strong></label>
     <select name='sexo'>
-    <option class="contact_input"  name="sexo" value="001" style="margin-left:30%;"/>Masculino</option>
-   	<option class="contact_input"  name="sexo" value="002" style="margin-left:30%;"/>Feminino</option>
+    <option class="contact_input"  name="sexo" id="sexo" value="Masculino" style="margin-left:30%;"/>Masculino</option>
+   	<option class="contact_input"  name="sexo" value="Feminino" style="margin-left:30%;"/>Feminino</option>
     </select>
     </div>
     
     <div class="form_row">  
     <label class="contact"><strong>CPF:</strong></label>
-    <form name="frmcpf" method="post" action="default.php" onsubmit="VerificaCPF();">
-    <input class="contact_input" type="text" name="cpf" maxlength="11" onkeypress="formatar('###########', this)"/></form>
+    <input class="contact_input" type="text" name="cpf" maxlength="11" onkeypress="formatar('###########', this)"/>
     </div>
     
     <div class="form_row">
@@ -73,8 +100,8 @@
     
     <div class="form_row">
     <label class="contact"><strong>País:</strong></label>
-    <select name='sexo'>
-    <option class="contact_input"  name="pais" value="001" style="margin-left:30%;"/>Brasil</option>
+    <select name='pais'>
+    <option class="contact_input"  name="pais" value="Brasil" style="margin-left:30%;"/>Brasil</option>
     </select>
     </div>
     
@@ -99,12 +126,12 @@
     
     <div class="form_row">
     <label class="contact"><strong>Endereço:</strong></label>
-	<input class="contact_input" type="text" name="endereço" size="24"/>
+	<input class="contact_input" type="text" name="endereco" size="24"/>
     </div>
     
     <div class="form_row">
     <label class="contact"><strong>Complemento:</strong></label>
-	<input  class="contact_input"type="text" name="complementoEndereço" size="24"/>
+	<input  class="contact_input"type="text" name="complend" size="24"/>
     </div>
     
     <div class="form_row">
@@ -114,7 +141,7 @@
     
     <div class="form_row">
     <label class="contact"><strong>E-mail:</strong></label>
-	<input  class="contact_input"type="text" name="email" size="24"/>
+	<input  class="contact_input"type="text" name="email" id="email" size="24"/>
     </div>
     
     <div class="form_row">
@@ -165,7 +192,7 @@
     </div> 
 	
 	<div class="form_row">
-	<input class="register" type="submit" value="Enviar" onclick=""/>
+	<input class="register" type="submit" value="Enviar"/>
 	</div>
 	
 	</form> 
