@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-
+<?php 
+	include("PadraoComum.php");
+?>
 <html>
 <head>
     <link rel="stylesheet" href="CSS/Cadastro.css" />
 	<link rel="stylesheet" href="CSS/style.css" />
     <script type="text/javascript" src="Javascript/cidades-estados-v0.2.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" ></script>
-	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.6/jquery.validate.js" ></script>
+	<script src="Javascript/jquery.validate.js" ></script>
 	<script type="text/javascript">
         function formatar(mascara, documento) {
             var i = documento.value.length;
@@ -29,32 +30,6 @@
     }
 </script>
 
-
-<script type="text/javascript">
-			$(document).ready(function(){
-				$('#cadastro').validate({
-					rules:{ 
-						nome:{ 
-							required: true,
-						},
-						email: {
-							required: true,
-							email: true
-						}
-					},
-					 messages: ,
-  success: function(label) {
-    label
-      .addClass('valid')
-      .closest('.form_row').addClass('success');
-  }
-					
-				});
-			});
-		</script>
-
-   
-
 <script>
     $(function() {
         $( "#datepicker" ).datepicker({
@@ -66,12 +41,24 @@
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
     <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
     <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+	
+<style type="text/css">
+* { font-family: Verdana; font-size: 96%; }
+label { width: 10em; float: left; }
+label.error { float: none; color: red; padding-left: .5em; vertical-align: top; }
+p { clear: both; }
+.submit { margin-left: 12em; }
+em { font-weight: bold; padding-right: 1em; vertical-align: top; }
+</style>
+  
+<script>
+  $(document).ready(function(){
+    $("#cadastro").validate();
+  });
+</script>
 
 </head>
 <body>
-	<?php 
-	include("PadraoComum.php");
-	?>
 	 <!--conteudo-->
     <div class="conteudo">
 	<div class="principal">
@@ -81,7 +68,7 @@
 	
 	<div class="form_row">
     <label class="contact"><strong>Nome:</strong></label>
-    <input type="text" name="nome" id="nome" class="contact_input" onblur="Valida_nome();"/>
+    <input type="text" name="nome" id="nome" class="contact_input required"/>
     </div>
     
     <div class="form_row">
