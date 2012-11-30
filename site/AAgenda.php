@@ -1,8 +1,8 @@
 <html>
  <head>
  <link rel="stylesheet" href="CSS/CalendarioAgenda.css" />
-    <script src="Javascript/Calendario.js"></script>
-    <script src="Javascript/Calendario2.js"></script>
+    <script type="text/javascript" src="Javascript/Calendario.js"></script>
+    <script type="text/javascript" src="Javascript/Calendario2.js"></script>
  <script type="text/javascript">
         $(function () {
             $("#datepicker").datepicker({
