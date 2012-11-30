@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-
+<?php 
+	include("PadraoComum.php");
+?>
 <html>
 <head>
     <link rel="stylesheet" href="CSS/Cadastro.css" />
+	<link rel="stylesheet" href="CSS/style.css" />
     <script type="text/javascript" src="Javascript/cidades-estados-v0.2.js"></script>
-    <script type="text/javascript" >
+	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+	<script type="text/javascript" src="JavaScript/jquery.validate.js"></script>
+
+	<script type="text/javascript">
         function formatar(mascara, documento) {
             var i = documento.value.length;
             var saida = mascara.substring(0, 1);
@@ -25,21 +31,45 @@
         );
     }
 </script>
+
+<script>
+    $(function() {
+        $( "#datepicker" ).datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+    });
+    </script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script> 
+	
+<style type="text/css">
+* { font-family: Verdana; font-size: 96%; }
+label { width: 10em; float: left; }
+label.error { float: none; color: red; padding-left: .5em; vertical-align: top; }
+p { clear: both; }
+.submit { margin-left: 12em; }
+em { font-weight: bold; padding-right: 1em; vertical-align: top; }
+</style>
+  
+<script>
+  $(document).ready(function(){
+    $("#cadastro").validate();
+  });
+</script>
+
 </head>
 <body>
-	<?php 
-	include("PadraoComum.php");
-	?>
 	 <!--conteudo-->
     <div class="conteudo">
 	<div class="principal">
 	<div class="contact_form">
 	<div class="form_subtitle">Crie seu novo cadastro</div>
-	<form method="POST" action="Cadastro_exec.php" >
-	
+	<form method="POST" id="cadastro" action="" >
+    
 	<div class="form_row">
     <label class="contact"><strong>Nome:</strong></label>
-    <input type="text" class="contact_input" />
+    <input type="text" name="nome" id="nome" class="contact_input required"/>
     </div>
     
     <div class="form_row">
@@ -55,15 +85,14 @@
     <div class="form_row">
     <label class="contact"><strong>Sexo:</strong></label>
     <select name='sexo'>
-    <option class="contact_input"  name="sexo" value="001" style="margin-left:30%;"/>Masculino</option>
-   	<option class="contact_input"  name="sexo" value="002" style="margin-left:30%;"/>Feminino</option>
+    <option class="contact_input"  name="sexo" id="sexo" value="Masculino" style="margin-left:30%;"/>Masculino</option>
+   	<option class="contact_input"  name="sexo" value="Feminino" style="margin-left:30%;"/>Feminino</option>
     </select>
     </div>
     
     <div class="form_row">  
     <label class="contact"><strong>CPF:</strong></label>
-    <form name="frmcpf" method="post" action="default.php" onsubmit="VerificaCPF();">
-    <input class="contact_input" type="text" name="cpf" maxlength="11" onkeypress="formatar('###########', this)"/></form>
+    <input class="contact_input" type="text" name="cpf" maxlength="11" onkeypress="formatar('###########', this)"/>
     </div>
     
     <div class="form_row">
@@ -73,8 +102,8 @@
     
     <div class="form_row">
     <label class="contact"><strong>País:</strong></label>
-    <select name='sexo'>
-    <option class="contact_input"  name="pais" value="001" style="margin-left:30%;"/>Brasil</option>
+    <select name='pais'>
+    <option class="contact_input"  name="pais" value="Brasil" style="margin-left:30%;"/>Brasil</option>
     </select>
     </div>
     
@@ -99,12 +128,12 @@
     
     <div class="form_row">
     <label class="contact"><strong>Endereço:</strong></label>
-	<input class="contact_input" type="text" name="endereço" size="24"/>
+	<input class="contact_input" type="text" name="endereco" size="24"/>
     </div>
     
     <div class="form_row">
     <label class="contact"><strong>Complemento:</strong></label>
-	<input  class="contact_input"type="text" name="complementoEndereço" size="24"/>
+	<input  class="contact_input"type="text" name="complend" size="24"/>
     </div>
     
     <div class="form_row">
@@ -112,10 +141,7 @@
 	<input class="contact_input" type="text" name="bairro" size="24"/>
     </div>
     
-    <div class="form_row">
-    <label class="contact"><strong>E-mail:</strong></label>
-	<input  class="contact_input"type="text" name="email" size="24"/>
-    </div>
+
     
     <div class="form_row">
     <label class="contact"><strong>Fone (DDD):</strong></label>
@@ -165,7 +191,7 @@
     </div> 
 	
 	<div class="form_row">
-	<input class="register" type="submit" value="Enviar" onclick=""/>
+	<input class="register" type="submit" value="Enviar"/>
 	</div>
 	
 	</form> 
