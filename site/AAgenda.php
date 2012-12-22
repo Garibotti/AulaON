@@ -1,3 +1,6 @@
+<?php 
+	include("PadraoLogado.php");
+	?>
 <html>
  <head>
  <link rel="stylesheet" href="CSS/CalendarioAgenda.css" />
@@ -12,9 +15,6 @@
     </script>
 </head>
 <body>
-<?php 
-	include("PadraoLogado.php");
-	?>
 	<!--menu-->
 	<?php 
 	include("AMenuLogado.php");

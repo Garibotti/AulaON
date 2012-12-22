@@ -1,9 +1,10 @@
-<html>
-
-<body>
 <?php 
 	include("PadraoLogado.php");
 	?>
+<html>
+
+<body>
+
 	<!--menu-->
 	<?php 
 	include("AMenuLogado.php");

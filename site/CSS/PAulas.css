@@ -1,0 +1,52 @@
+#tabs-1{
+	
+	
+	max-width:20%;
+	min-height:50%;
+	}
+	#tabs-2{
+	
+	max-width:20%;
+	min-height:50%;
+	}
+	#tabs-3{
+
+	max-width:20%;
+	min-height:50%;
+	}
+.medio{
+	top:25%;
+	left:5%;
+	position:relative;
+	}
+	
+.fundamental{
+	position:absolute;
+	top:14.5%;
+	left:50%;
+	}
+#btn{
+	top:87px;
+	left:250px;
+	position:absolute;
+	}
+#btn1{
+	top:87px;
+	left:250px;
+	position:absolute;
+	}
+	#incluir{
+	top:367px;
+	left:200px;
+	position:absolute;
+	}
+	#incluir1{
+	top:437px;
+	left:516px;
+	position:absolute;
+	}
+	#incluir2{
+	top:437px;
+	left:516px;
+	position:absolute;
+	}

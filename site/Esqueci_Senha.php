@@ -1,9 +1,10 @@
-<html>
-<body>
 <?php
 
 include("PadraoComum.php");
 ?>
+<html>
+<body>
+
     <div class="conteudo">
     <div class="principal">
 	<br>
