@@ -44,7 +44,7 @@
     <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script> 
 	
 <style type="text/css">
-label.error { position: absolute;}
+	label.error { position: absolute;}
 </style>
 
 <script>
