@@ -46,7 +46,11 @@
 <style type="text/css">
 label.error { position: absolute;}
 </style>
-  
+
+ <style type="text/css">
+
+</style>
+
 <script>
   $(document).ready(function(){
     $("#cadastro").validate();
