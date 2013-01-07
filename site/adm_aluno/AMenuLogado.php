@@ -1,5 +1,5 @@
 <html>
-<link rel="stylesheet" href="CSS/PadraoLogado.css" />
+<link rel="stylesheet" href="css/PadraoLogado.css" />
 <body>
 	<div class="sidebarmenu">
 		<a href="SAluno.php" class="menuitem_red">
@@ -10,7 +10,7 @@
 			<!-- <span class="accordprefix"></span> -->
 			Próxima Aula
 		</a>
-		<a href="AulasDisponiveis.php" class="menuitem_red">
+		<a href="../AulasDisponiveis.php" class="menuitem_red">
 			<!-- <span class="accordprefix"></span> -->
 			Aulas Disponíveis
 		</a>

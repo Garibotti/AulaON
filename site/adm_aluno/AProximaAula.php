@@ -1,5 +1,5 @@
 <?php 
-	include("PadraoLogado.php");
+	include("../PadraoLogado.php");
 	?>
 <html>
 
@@ -7,7 +7,7 @@
 
 	<!--menu-->
 	<?php 
-	include("AMenuLogado.php");
+	include("../AMenuLogado.php");
 	?>
 	<!--/menu-->
 	<!--conteudo-->
@@ -24,7 +24,7 @@
 
 	<!--rodape-->
     <?php 
-	include("Rodape.php");
+	include("../Rodape.php");
 	?>
     <!--/rodape-->
 </body>
