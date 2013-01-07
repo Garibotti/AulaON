@@ -1,17 +1,5 @@
-<?php 
-	include("PadraoLogado.php");
-	?>
-<html>
 
-<body>
-
-	<!--menu-->
-	<?php 
-	include("PMenuLogado.php");
-	?>
-	<!--/menu-->
-<!--conteudo-->
-    <div class="conteudo">
+<div class="conteudo">
     <div class="principal">
     <p class="fonte">Primeiro site onde você pode ter aulas ao vivo com seu professor, de qualquer parte do mundo, qualquer disciplina disponível pelos professores cadastrados!</p>
     <br />
@@ -20,13 +8,3 @@
     <br />
     
     </div>
-    <!--/conteudo-->
-
-	<!--rodape-->
-    <?php 
-	include("Rodape.php");
-	?>
-    <!--/rodape-->
-</body>
-
-</html>

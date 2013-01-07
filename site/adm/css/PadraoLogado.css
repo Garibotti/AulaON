@@ -4,32 +4,6 @@ body {
 	list-style:none;
 }
 
-.sidebarmenu{
-	margin:0px 0;
-	padding:0;
-	width:12%;
-	background: #e5e5e5; /* Old browsers */
-	background: -moz-linear-gradient(top,  #e5e5e5 0%, #ffffff 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #e5e5e5 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #e5e5e5 0%,#ffffff 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #e5e5e5 0%,#ffffff 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #e5e5e5 0%,#ffffff 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-		
-}
-
-.sidebarmenu a.menuitem_red{background:url(../Imagens_Adm_Aluno/red_bt.gif) no-repeat center top;
-	color: #fff;display: block;position: relative;width:80%;height:31px;margin:0 0 5px 0;line-height:31px;padding:0px 0 0 10px;text-decoration: none;
-}
-
-.sidebarmenu a.menuitem_red:hover{background:url(../Imagens_Adm_Aluno/red_bt_a.gif) no-repeat center top;}
-
-.sidebarmenu a.menuitem:visited, .sidebarmenu .menuitem:active{
-	color: white;
-}
-
-
 .conteudo
 {
 	background: #e5e5e5; /* Old browsers */
@@ -111,15 +85,42 @@ h2{
 	font-size:20px;
 }
 
-/*CSS Forms*/
+/*CSS Forms ComboBox*/
 
 .NFSelect {height:34px; position:absolute; border:1px solid transparent; }
-.NFSelectLeft {float:left; width:12px; height:34px; background:url(../imagens_adm_aluno/select-left.gif) no-repeat 0 0; vertical-align:middle;}
-.NFSelectRight {height:34px; width:310px; background:url(../imagens_adm_aluno/select-right.gif) no-repeat 100% 0; cursor:pointer; font:12px/21px Arial, Helvetica, sans-serif; color:#000; padding-left:3px; margin-left:3px; line-height:34px;}
+.NFSelectLeft {float:left; width:12px; height:34px; background:url(../imagens/select-left.gif) no-repeat 0 0; vertical-align:middle;}
+.NFSelectRight {height:34px; width:310px; background:url(../imagens/select-right.gif) no-repeat 100% 0; cursor:pointer; font:12px/21px Arial, Helvetica, sans-serif; color:#000; padding-left:3px; margin-left:3px; line-height:34px;}
 .NFSelectTarget {position:absolute; background:none; margin-left:-13px; margin-top:0px; z-index:3; left:0; top:0; padding-bottom:13px;}
 .NFSelectOptions {position:relative; float:left; margin-left:16px; margin-top:26px; list-style:none; padding:0px; line-height:18px; color:#000; z-index:4; max-height:200px;  left:0; top:0;}
 .NFSelectOptions li {padding:3px 0px 3px 0; width:307px;background:#efefef;}
 .NFSelectOptions a {display:block; text-decoration:none; color:#000; padding:3px 0 3px 6px; background:none;}
 .NFSelectOptions a.NFOptionActive {background:#ecf8fd;}
 .NFSelectOptions a:hover {background:#ecf8fd;}
+
+/*Menus*/
+.sidebarmenu{
+	margin:0px 0;
+	padding:0;
+	width:12%;
+	background: #e5e5e5; /* Old browsers */
+	background: -moz-linear-gradient(top,  #e5e5e5 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e5e5e5 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e5e5e5 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e5e5e5 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e5e5e5 0%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+		
+}
+
+.sidebarmenu a.menuitem_red{background:url(../imagens/red_bt.gif) no-repeat center top;
+	color: #fff;display: block;position: relative;width:80%;height:31px;margin:0 0 5px 0;line-height:31px;padding:0px 0 0 10px;text-decoration: none;
+}
+
+.sidebarmenu a.menuitem_red:hover{background:url(../imagens/red_bt_a.gif) no-repeat center top;}
+
+.sidebarmenu a.menuitem:visited, .sidebarmenu .menuitem:active{
+	color: white;
+}
+
 

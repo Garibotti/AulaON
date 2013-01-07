@@ -1,15 +1,3 @@
-<?php 
-	include("../PadraoLogado.php");
-	?>
-<html>
-
-<body>
-
-	<!--menu-->
-	<?php 
-	include("../AMenuLogado.php");
-	?>
-	<!--/menu-->
 	<!--conteudo-->
     <div class="conteudo">
     <div class="principal">
@@ -21,12 +9,3 @@
     
     </div>
     <!--/conteudo-->
-
-	<!--rodape-->
-    <?php 
-	include("../Rodape.php");
-	?>
-    <!--/rodape-->
-</body>
-
-</html>

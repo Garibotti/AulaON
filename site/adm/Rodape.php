@@ -1,14 +1,7 @@
-<!DOCTYPE html>
 
-<html>
-
-<head>
-    <link rel="stylesheet" href="CSS/Rodape.css" />
-</head>
-
-<body>
     <!--rodapé-->
-    <div id="rodape">
+    <link rel="stylesheet" href="CSS/Rodape.css" />
+    <div id="rodape">    	
     <div id="rodapei">
             <table style="color:#FF6600;">
             <td>
@@ -38,5 +31,3 @@
             </div>
 		</div>
     <!--/rodapé-->
-</body>
-</html>

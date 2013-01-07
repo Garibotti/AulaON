@@ -1,21 +1,10 @@
-<?php 
-	include("../PadraoLogado.php");
-	?>
-<html>
 
-<body>
-
-	<!--menu-->
-	<?php 
-	include("AMenuLogado.php");
-	?>
-	<!--/menu-->
 	<!--conteudo-->
     <div class="conteudo">
     <div class="principal">
     	<h2>Compre créditos e veja sua informações referentes a compras</h2>    	
     	<div class="NFSelect" style="z-index: 999;">
-    		<img src="imagens_adm_aluno/0.png" class="NFSelectLeft">
+    		<img src="imagens/0.png" class="NFSelectLeft">
     			<div class="NFSelectRight">R$ 10</div>
     			<div class="NFSelectTarget" style="display: none; width: 128px;">
     				<ul class="NFSelectOptions" style="width: 95px;">
@@ -35,12 +24,3 @@
     </form>
     </div>
     <!--/conteudo-->
-
-	<!--rodape-->
-    <?php 
-	include("../Rodape.php");
-	?>
-    <!--/rodape-->
-</body>
-
-</html>
