@@ -31,7 +31,7 @@
 				<br><br>
 				<h4>Formas de Pagamento</h4>
 					<ul>
-						<img src="Imagens/imgBoleto.jpg" alt="Boleto" title="Boleto"/>
+						<img src="../imagens/imgBoleto.jpg" alt="Boleto" title="Boleto"/>
 					</ul>
             </td>
             </table>
