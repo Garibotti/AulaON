@@ -27,7 +27,7 @@
 	    			</ul>
     			</div>
     	</div>
-     	<img class="none" title="botao_comprar" src="Imagens_Adm_Aluno/botao_comprar.gif" alt="Comprar">
+     	<img class="btn_comprar" title="botao_comprar" src="imagens/imagensbotao_comprar.fw.png" alt="Comprar">
     </div>
     <br />
     <form action="" method="post">
