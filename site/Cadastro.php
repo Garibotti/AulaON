@@ -4,6 +4,7 @@
 ?>
 <html>
 <head>
+	
     <link rel="stylesheet" href="CSS/Cadastro.css" />
 	<link rel="stylesheet" href="CSS/style.css" />
     <script type="text/javascript" src="Javascript/cidades-estados-v0.2.js"></script>
@@ -22,15 +23,6 @@
         }
 
     </script>
-    <script type="text/javascript">
-    window.onload = function() {
-        new dgCidadesEstados(
-            document.getElementById('estado'),
-            document.getElementById('cidade'),
-            true
-        );
-    }
-</script>
 
 <script>
     $(function() {
@@ -42,14 +34,122 @@
     </script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
     <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script> 
-	
-<style type="text/css">
-	label.error { position: absolute;}
-</style>
 
 <script>
+jQuery.validator.addMethod("data", function(value, element) {
+    if(value.length!=10) return false;
+    var data        = value;
+    var dia         = data.substr(0,2);
+    var barra1      = data.substr(2,1);
+    var mes         = data.substr(3,2);
+    var barra2      = data.substr(5,1);
+    var ano         = data.substr(6,4);
+    if(data.length!=10||barra1!="/"||barra2!="/"||isNaN(dia)||isNaN(mes)||isNaN(ano)||dia>31||mes>12)return false;
+    if((mes==4||mes==6||mes==9||mes==11)&& dia==31)return false;
+    if(mes==2 && (dia>29||(dia==29 && ano%4!=0)))return false;
+    if(ano < 1900)return false;
+    return true;
+}, "<img src=\"Imagens/error.png\">");
+</script>
+
+<script>
+jQuery.validator.addMethod("verificaCPF", function(value, element) {
+value = value.replace('.','');
+value = value.replace('.','');
+cpf = value.replace('-','');
+while(cpf.length < 11) cpf = "0"+ cpf;
+var expReg = /^0+$|^1+$|^2+$|^3+$|^4+$|^5+$|^6+$|^7+$|^8+$|^9+$/;
+var a = [];
+var b = new Number;
+var c = 11;
+for (i=0; i<11; i++){
+    a[i] = cpf.charAt(i);
+    if (i < 9) b += (a[i] * --c);
+}
+if ((x = b % 11) < 2) { a[9] = 0 } else { a[9] = 11-x }
+b = 0;
+c = 11;
+for (y=0; y<10; y++) b += (a[y] * c--);
+if ((x = b % 11) < 2) { a[10] = 0; } else { a[10] = 11-x; }
+if ((cpf.charAt(9) != a[9]) || (cpf.charAt(10) != a[10]) || cpf.match(expReg)) return false;
+return true;
+}, "<img src=\"Imagens/error.png\">");
+
   $(document).ready(function(){
-    $("#cadastro").validate();
+    $("#cadastro").validate({
+	errorLabelContainer: $("#RegisterErrors"),
+	
+	rules:{
+		nome:{
+			required: true,
+			minlength: 3
+			 },
+		sobrenome:{
+			required: true
+		  },
+		 email:{
+			required: true,
+			email: true
+		},
+		dn:{
+			required: true,
+			data:true
+			},
+		telefone:{
+			required: true,
+			},
+		cpf:{
+			required: true,
+			verificaCPF: true
+			},
+		celular:{
+			required: true,
+			},
+		senha:{
+			required: true
+		},
+		confirmarsenha:{
+			required: true,
+			equalTo: "#senha"
+		},
+		termos: "required"
+	},
+			
+		  
+	messages:{
+		nome:{
+			required: "<img src=\"Imagens/error.png\">",
+			minlength: "<img src=\"Imagens/error.png\">"
+			 },
+		sobrenome:{
+			required: "<img src=\"Imagens/error.png\">"
+		  },
+		email:{
+			required: "<img src=\"Imagens/error.png\">",
+			email: "<img src=\"Imagens/error.png\">"
+		},
+		dn:{
+			required: "<img src=\"Imagens/error.png\">"
+			},
+		telefone:{
+			required: "<img src=\"Imagens/error.png\">"
+			},
+		celular:{
+			required: "<img src=\"Imagens/error.png\">"
+			},
+		cpf:{
+			required: "<img src=\"Imagens/error.png\">"
+			},
+		senha:{
+			required: "<img src=\"Imagens/error.png\">"
+		},
+		confirmarsenha:{
+			required: "<img src=\"Imagens/error.png\">",
+			equalTo: "O campo confirmação de senha deve ser identico ao campo senha."
+		},
+		termos: "<img src=\"Imagens/error.png\">"
+	}
+	});	
   });
 </script>
 
@@ -64,130 +164,67 @@
     
 	<div class="form_row">
     <label class="contact"><strong>Nome:</strong></label>
-    <input type="text" name="nome" id="nome" class="contact_input required"/>
+    <input type="text" name="nome" id="nome"  class="contact_input"/>
     </div>
     
     <div class="form_row">
     <label class="contact"><strong>Sobrenome:</strong></label>
-    <input class="contact_input" type="text" name="sobrenome" id="sobrenome" size="24" onkeyup="validarSNome();"/>
+    <input class="contact_input" type="text" name="sobrenome" id="sobrenome" size="24" />
+    </div>
+	
+	<div class="form_row">
+    <label class="contact"><strong>Email:</strong></label>
+    <input type="text" name="email" id="email" class="contact_input"/>
     </div>
     
     <div class="form_row">
     <label class="contact"><strong>Data de nascimento:</strong></label>
-    <input class="contact_input" type="text" name="dn" id="dn" maxlength="10" onkeypress="formatar('##-##-####', this)" onkeyup="validarDN();"/>
+    <input class="contact_input" type="text" name="dn" id="dn" maxlength="10" onkeypress="formatar('##/##/####', this)" />
     </div>
     
     <div class="form_row">
     <label class="contact"><strong>Sexo:</strong></label>
-    <select name='sexo'>
-    <option class="contact_input"  name="sexo" id="sexo" value="Masculino" style="margin-left:30%;"/>Masculino</option>
+    <select name="sexo" id="sexo">
+    <option class="contact_input"  name="sexo" value="Masculino" style="margin-left:30%;"/>Masculino</option>
    	<option class="contact_input"  name="sexo" value="Feminino" style="margin-left:30%;"/>Feminino</option>
     </select>
     </div>
     
     <div class="form_row">  
     <label class="contact"><strong>CPF:</strong></label>
-    <input class="contact_input" type="text" name="cpf" maxlength="11" onkeypress="formatar('###########', this)"/>
-    </div>
-    
-    <div class="form_row">
-    <label class="contact"><strong>RG:</strong></label>
-    <input class="contact_input" type="text" name="rg" size="24"/>
-    </div>
-    
-    <div class="form_row">
-    <label class="contact"><strong>País:</strong></label>
-    <select name='pais'>
-    <option class="contact_input"  name="pais" value="Brasil" style="margin-left:30%;"/>Brasil</option>
-    </select>
-    </div>
-    
-    <div class="form_row">
-    <fieldset>
-	<label class="contact"><strong>UF:</strong></label>
-	<select id="estado" name="estado"></select>
-	</fieldset>
-    </div>
-    
-    <div class="form_row">
-    <fieldset>
-    <label class="contact"><strong>Cidade:</strong></label>
-	<select id="cidade" name="cidade"></select>
-	</fieldset>
-    </div>
-    
-    <div class="form_row">
-    <label class="contact"><strong>CEP:</strong></label>
-	<input class="contact_input" type="text" name="cep" maxlength="9" onkeypress="formatar('#####-###', this)"/>
-    </div>
-    
-    <div class="form_row">
-    <label class="contact"><strong>Endereço:</strong></label>
-	<input class="contact_input" type="text" name="endereco" size="24"/>
-    </div>
-    
-    <div class="form_row">
-    <label class="contact"><strong>Compl.:</strong></label>
-	<input  class="contact_input"type="text" name="complend" size="24"/>
-    </div>
-    
-    <div class="form_row">
-    <label class="contact"><strong>Bairro:</strong></label>
-	<input class="contact_input" type="text" name="bairro" size="24"/>
-    </div>
-    
-
-    
+    <input class="contact_input" type="text" name="cpf" id="cpf" maxlength="11" onkeypress="formatar('###########', this)"/>
+    </div>  
+ 
     <div class="form_row">
     <label class="contact"><strong>Fone (DDD):</strong></label>
-	<input class="contact_input" type="text" name="telefone" maxlength="11" onkeypress="formatar('##-########', this)"/>
+	<input class="contact_input" type="text" name="telefone" id="telefone" maxlength="11" onkeypress="formatar('##-########', this)"/>
     </div>
     
     <div class="form_row">
     <label class="contact"><strong>Cel (DDD):</strong></label>
-	<input class="contact_input" type="text" name="celular" maxlength="12" onkeypress="formatar('##-#########', this)"/>
+	<input class="contact_input" type="text" name="celular" id="celular" maxlength="12" onkeypress="formatar('##-#########', this)"/>
     </div>
-    
-    <div class="form_row">
-    <label class="contact"><strong>Banco:</strong></label>
-	<input class="contact_input" type="text" name="banco" size="24"/>
-    </div>
-    
-    <div class="form_row">
-    <label class="contact"><strong>Agência:</strong></label>
-	<input class="contact_input" type="text" name="agenciaBanco" size="24"/>
-    </div>
-    
-    <div class="form_row">
-    <label class="contact"><strong>Conta Corrente:</strong></label>
-	<input class="contact_input" type="text" name="contacorrente" size="24"/>
-    </div>
-    
-    <div class="form_row">
-    <label class="contact"><strong>Nome de usuário:</strong></label>
-   	<input class="contact_input" type="text" name="usuario" size="24"/>
-   	</div>
     
     <div class="form_row">
     <label class="contact"><strong>Senha:</strong></label>
-    <input class="contact_input" type="password" name="senha" size="24"/>
+    <input class="contact_input" type="password" name="senha" id="senha" size="24"/>
     </div>
     
     <div class="form_row">
     <label class="contact"><strong>Confirmar senha:</strong></label>
- 	<input class="contact_input" type="password" name="confirmarsenha" size="24"/>
+ 	<input class="contact_input" type="password" name="confirmarsenha" id="confirmarsenha" size="24"/>
     </div>
 	
 	<div class="form_row">
     <div class="terms">
-    <input type="checkbox" name="terms" />
+    <input type="checkbox" name="termos" id="termos"/>
               Eu concordo com os <a href="TermosCondicoes.php">Termos &amp; Condições</a>                        
     </div>
-    </div> 
-	
+    </div>
 	<div class="form_row">
 	<input class="register" type="submit" value="Enviar"/>
 	</div>
+	
 	
 	</form> 
 	</div>
