@@ -1,20 +1,30 @@
 <?php 
-	include("PadraoLogado.php");
+	include("../PadraoLogado.php");
 ?>
 <html>
  <head>
  <link rel="stylesheet" href="CSS/PAulas.css" />
  <link rel="stylesheet" href="CSS/datetimepicker.css" />
- <link rel="stylesheet" href="CSS/jquery-ui.css" />
+ <link rel="stylesheet" href="../css/jquery-ui.css" />
     <link rel="stylesheet" href="/resources/demos/style.css" />
     <link href="CSS/shadowbox.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="Javascript/shadowbox.js"></script>
+	<script type="text/javascript" src="../js/shadowbox.js"></script>
 	<script type="text/javascript">
 		Shadowbox.init
 		({
 			language: 'pt',
 			player: ['img', 'html', 'swf']
 		});
+		window.onload = function() {
+
+		    // open a welcome message as soon as the window loads
+		    Shadowbox.open({
+		        content:    'domingo.php',
+		        height:     100,
+		        width:      150
+		    });
+
+		};
 	</script>
     <style>
     	h1 { padding: .1em; margin: 0; }
@@ -23,15 +33,15 @@
     	/* style the list to maximize the droppable hitarea */
     	#cart ol { margin: 0; padding: 1em 0 1em 3em; }
     </style>
-    <script src="Javascript/jquery-1.8.3.js"></script>
-    <script src="Javascript/jqueryui-1.9.2.js"></script>
-    <script src="Javascript/datetimepicker.js"></script>
-    <script src="Javascript/lightbox.js"></script>
-	<link href="CSS/lightbox.css" rel="stylesheet" />
+    <script src="../js/jquery-1.8.3.js"></script>
+    <script src="../js/jqueryui-1.9.2.js"></script>
+    <script src="../js/datetimepicker.js"></script>
     <script>
-    $(function() {
-        $( "#datepicker" ).timepicker();
-    });
+   
+    	$(function() {
+        	$( "div #datepicker" ).timepicker();
+    	});
+
     </script>
     <script>
     $(function() {
@@ -79,6 +89,15 @@
 		  $("#btn1").click(function(){
 			  if(j<9){
 		    $("#tabs-3 ").append("<input>");j++;}
+		  });
+		});
+	</script>
+	<script>
+	$(document).ready(function(){
+		l=0;
+		  $("#btn2").click(function(){
+			  if(l<9){
+		    $("#up_content").append("<input>");l++;}
 		  });
 		});
 	</script>
@@ -141,115 +160,63 @@
 	</div>
 	<div id="datasemana">
 	<br>
-	<p>Agende os dias e horários disponíveis:</p><br>
-	<select name='semana'>
-    <option  name="semana" value="domingo" style="margin-left:30%;"/>Domingo</option>
-   	<option  name="semana" value="segunda" style="margin-left:30%;"/>Segunda-feira</option>
-   	<option  name="semana" value="terça" style="margin-left:30%;"/>Terça-feira</option>
-   	<option  name="semana" value="quarta" style="margin-left:30%;"/>Quarta-feira</option>
-   	<option  name="semana" value="quinta" style="margin-left:30%;"/>Quinta-feira</option>
-   	<option  name="semana" value="sexta" style="margin-left:30%;"/>Sexta-feira</option>
-   	<option  name="semana" value="sabado" style="margin-left:30%;"/>Sábado</option>
-    </select>
+	<p>Agende os dias e horários disponíveis para a próxima semana:</p><br>
 	</div>
-<a rel="shadowbox" href="#upinside">Domingo</a>
-<a rel="shadowbox" href="#upinside1">Segunda-feira</a>
-<a rel="shadowbox" href="#upinside2">Terça-feira</a>
-<a rel="shadowbox" href="#upinside3">Quarta-feira</a>
-<a rel="shadowbox" href="#upinside4">Quinta-feira</a>
-<a rel="shadowbox" href="#upinside5">Sexta-feira</a>
-<a rel="shadowbox" href="#upinside6">Sábado</a>
+	<a rel="shadowbox" href="domingo.php" id="domingo" class="semana">Domingo</a>
+	<a rel="shadowbox" href="#upinside1" class="semana">Segunda-feira</a>
+	<a rel="shadowbox" href="#upinside2" class="semana">Terça-feira</a>
+	<a rel="shadowbox" href="#upinside3" class="semana">Quarta-feira</a>
+	<a rel="shadowbox" href="#upinside4" class="semana">Quinta-feira</a>
+	<a rel="shadowbox" href="#upinside5" class="semana">Sexta-feira</a>
+	<a rel="shadowbox" href="#upinside6" class="semana">Sábado</a>
+	<script>
+	$("#domingo").click(function(){
+	$("#domingo").css('background-color', "#339966");
+	});
+</script>
 	<div id="upinside" style="display:none;">
-		<div id="up_content" style="padding:10px;background-color:white;">
-			<div id="products">
-    <h1 class="ui-widget-header">Informe seu horário</h1>
-    <div id="catalog">
-        <h2>Informe seu horário</h2>
-        <div>
-            <ul>
-            	<li><input type="text" id="datepicker" value=""/></li>
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div id="abrir-lightbox">
-<div id="cart">
-    <h1 class="ui-widget-header">Agenda</h1>
-    <div class="ui-widget-content">
-        <ol>
-            <li class="placeholder">Adicione seus horários aqui</li>
-        </ol>
-        </div>
-    </div>
-</div> 
+		<div id="up_content" style="padding:10px;">
+		<p>Adicione aqui seus horários para Domingo</p><br>
+			<input type="text" id="datepicker" />
+			<button id="btn2">Incluir mais horários</button>
+			<button id="incluir3">Confirmar</button>
 		</div>
+	</div>
 	</div>
 	<div id="upinside1" style="display:none;">
 		<div id="up_content" style="padding:10px;">
+			<p>Adicione aqui seus horários para Segunda-feira</p><br>
 			<input type="text" id="datepicker" />
 		</div>
 	</div>
 	<div id="upinside2" style="display:none;">
 		<div id="up_content" style="padding:10px;">
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
+			<p>Adicione aqui seus horários para Terça-feira</p><br>
+			<input type="text" id="datepicker" />
 		</div>
 	</div>
 	<div id="upinside3" style="display:none;">
 		<div id="up_content" style="padding:10px;">
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
+			<p>Adicione aqui seus horários para Quarta-feira</p><br>
+			<input type="text" id="datepicker" />
 		</div>
 	</div>
 	<div id="upinside4" style="display:none;">
 		<div id="up_content" style="padding:10px;">
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
+			<p>Adicione aqui seus horários para Quinta-feira</p><br>
+			<input type="text" id="datepicker" />
 		</div>
 	</div>
 	<div id="upinside5" style="display:none;">
 		<div id="up_content" style="padding:10px;">
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
+			<p>Adicione aqui seus horários para Sexta-feira</p><br>
+			<input type="text" id="datepicker" />
 		</div>
 	</div>
 	<div id="upinside6" style="display:none;">
 		<div id="up_content" style="padding:10px;">
-			Conteúdo da div acolá!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
-			Conteúdo da div aqui!<br><br>
+			<p>Adicione aqui seus horários para Sábado</p><br>
+			<input type="text" id="datepicker" />
 		</div>
 	</div>
 	</div>
@@ -258,7 +225,7 @@
     <!--/conteudo-->
 	<!--rodape-->
     <?php 
-	include("Rodape.php");
+	include("../Rodape.php");
 	?>
     <!--/rodape-->
 </body>
