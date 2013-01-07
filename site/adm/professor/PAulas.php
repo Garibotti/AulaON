@@ -3,7 +3,7 @@
 ?>
 <html>
  <head>
- <link rel="stylesheet" href="CSS/PAulas.css" />
+ <link rel="stylesheet" href="css/PAulas.css" />
  <link rel="stylesheet" href="CSS/datetimepicker.css" />
  <link rel="stylesheet" href="../css/jquery-ui.css" />
     <link rel="stylesheet" href="/resources/demos/style.css" />
