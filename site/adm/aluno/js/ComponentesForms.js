@@ -1,3 +1,4 @@
+//Combo Box
 $(document).ready(function(){
 	$('.NFSelectRight').click(function(){		
 		if($('.NFSelectTarget:hidden').length > 0){

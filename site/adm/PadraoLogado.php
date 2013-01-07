@@ -5,8 +5,7 @@
 	<link rel="shortcut icon" href="../imagens/logoaulaon.png"/>
     <link rel="stylesheet" href="CSS/CSSReset.css" />
     <link rel="stylesheet" href="CSS/PadraoLogado.css" />
-    <script language="javascript" type="text/javascript" src="Javascript/jquery-1.8.3.js"></script>
-    <script language="javascript" type="text/javascript" src="Javascript/adm_aluno/FormAluno.js"></script>
+    <script language="javascript" type="text/javascript" src="Javascript/jquery-1.8.3.js"></script>    
     </head>
 
 <body>

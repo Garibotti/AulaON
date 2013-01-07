@@ -1,5 +1,6 @@
 <html>
 <link rel="stylesheet" href="css/PadraoLogado.css" />
+<script language="javascript" type="text/javascript" src="js/ComponentesForms.js"></script>
 <body>
 	<div class="sidebarmenu">
 		<a href="SAluno.php" class="menuitem_red">
