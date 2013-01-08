@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/CSSReset.css" />
     <link rel="stylesheet" href="css/PadraoLogado.css" />
     <script language="javascript" type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script language="javascript" type="text/javascript" src="js/jqueryui-1.9.2.js"></script>
     <script language="javascript" type="text/javascript" src="js/ComponentesForms"></script>     
     </head>
 
@@ -33,7 +34,7 @@
 <!--conteudo-->
     <!--menu-->
 	<?php 
-		$_SESSION["TipoUsuario"] = "Aluno";
+		$_SESSION["TipoUsuario"] = "Professor";
 		if(isset($_SESSION["TipoUsuario"]))
 		{
 			$tipoUsuario = $_SESSION["TipoUsuario"];
@@ -52,11 +53,11 @@
 				include("$tipoUsuario/$paginaEnviada.php");
 			}else
 			{
-				include("aluno/index.php");
+				include("$tipoUsuario/index.php");
 			}
 		}else
 		{
-			include("aluno/index.php");
+			include("$tipoUsuario/index.php");
 		}
 		
 

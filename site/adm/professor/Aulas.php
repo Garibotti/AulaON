@@ -2,35 +2,20 @@
  	<link rel="stylesheet" href="../css/jquery-ui.css" />
     <link rel="stylesheet" href="../css/shadowbox.css" />
     
-    <script src="../js/jquery-1.8.3.js"></script>
-    <script src="../js/jqueryui-1.9.2.js"></script>
     <script src="../js/datetimepicker.js"></script>
 	<script src="../js/shadowbox.js"></script>
 	
 	<script type="text/javascript">
+	$(document).ready(function(){
+		
 		Shadowbox.init
 		({
 			language: 'pt',
 			player: ['img', 'html', 'swf']
-		});
-		window.onload = function() {
+		});	
+	});
 
-		    // open a welcome message as soon as the window loads
-		    Shadowbox.open({
-		        content:    'domingo.php',
-		        height:     100,
-		        width:      150
-		    });
-
-		};
 	</script>
-    
-    <script>
-    	$(function() {
-        	$( "div #datepicker" ).timepicker();
-    	});
-
-    </script>
     
     <script>
     $(function() {
@@ -123,13 +108,14 @@
 				<br>
 				<p>Agende os dias e horários disponíveis para a próxima semana:</p><br>
 			</div>
-	<a rel="shadowbox" href="domingo.php" id="domingo" class="semana">Domingo</a>
-	<a rel="shadowbox" href="#upinside1" class="semana">Segunda-feira</a>
-	<a rel="shadowbox" href="#upinside2" class="semana">Terça-feira</a>
-	<a rel="shadowbox" href="#upinside3" class="semana">Quarta-feira</a>
-	<a rel="shadowbox" href="#upinside4" class="semana">Quinta-feira</a>
-	<a rel="shadowbox" href="#upinside5" class="semana">Sexta-feira</a>
-	<a rel="shadowbox" href="#upinside6" class="semana">Sábado</a>
+			
+	<a rel="shadowbox" href="professor/CadastroHorario.php" id="domingo" class="semana">Domingo</a>
+	<a rel="shadowbox" href="professor/CadastroHorario.php" id="segunda" class="semana">Segunda-feira</a>
+	<a rel="shadowbox" href="professor/CadastroHorario.php" id="terca" class="semana">Terça-feira</a>
+	<a rel="shadowbox" href="professor/CadastroHorario.php" id="quarta" class="semana">Quarta-feira</a>
+	<a rel="shadowbox" href="professor/CadastroHorario.php" id="quinta" class="semana">Quinta-feira</a>
+	<a rel="shadowbox" href="professor/CadastroHorario.php" id="sexta" class="semana">Sexta-feira</a>
+	<a rel="shadowbox" href="professor/CadastroHorario.php" id="sabado" class="semana">Sábado</a>
 	
 	<script>
 	$("#domingo").click(function(){
