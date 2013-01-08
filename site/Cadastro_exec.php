@@ -1,6 +1,6 @@
 <?php
+header("location:cadastro.php?status=Erro");
 $nome = $_POST["nome"];
-$snome = $_POST['sobrenome'];
 $dn = $_POST['dn'];
 $sexo = $_POST['sexo'];
 $cpf = $_POST['cpf'];
@@ -8,6 +8,8 @@ $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $celular = $_POST['celular'];
 $senha = $_POST['senha'];
+
+$tpCadastro = $_POST['tpCadastro'];
 
 
 function antiInjection($str) 
@@ -32,8 +34,19 @@ $senha = md5($senha);
 
 include "conecta_mysql.php";
 
-mysql_query("INSERT INTO usuario(Nome,Sobrenome,DN,Sexo,CPF,Email,Telefone,Celular,Senha) Values('$nome', '$snome', '$dn' , '$sexo', 
+$result = mysql_query("INSERT INTO usuario(Nome,DN,Sexo,CPF,Email,Telefone,Celular,Senha) Values('$nome', '$dn' , '$sexo', 
 '$cpf', '$email', '$telefone', '$celular', '$senha')");
 
-header("location:index.php");
+//Com o resultado insere um registro na tabela de aluno ou professor.
+if($result){
+	
+	$idUsuario = mysql_insert_id();	
+	mysql_query("INSERT INTO ".$tpCadastro."(usuario_id) Values('$idUsuario')");
+	
+}else{
+	header("location:cadastro.php?status=Erro");	
+}
+
+header("location:login.php?status=Sucesso");
+
 ?>

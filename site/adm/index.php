@@ -11,19 +11,27 @@
     </head>
 
 <body>
+<?php 
+	session_start("usuario");
+	$tipoUsuario = "";
+	if(isset($_SESSION["TipoUsuario"]))
+	{
+		$tipoUsuario = $_SESSION["TipoUsuario"];
+	}
+
+?>
 <div class="fundoTopo">
             <div id="topo" class="topoBranco">
                 <div id="topoCliente">
-                <!--logotipo-->
-                    <div id="logo">
-                    <a href="index.php"><img border="0" src="../imagens/aulaon.png" alt="Aula ON" title="Aula ON" width="350" height="90"></a>
-                    </div>
-                    <div id="logoff">
-                    <p>Seja Bem Vindo ao Aula ON!<br />
-							Fazer <a href="index.php" title="Logoff" style="color:#FF6600"><strong>logoff</strong></a>
-					</p>
-                    </div>
-                    
+                	<!--logotipo-->
+	                    <div id="logo">
+	                    <a href="../index.php"><img border="0" src="../imagens/aulaon.png" alt="Aula ON" title="Aula ON" width="350" height="90"></a>
+	                    </div>
+	                    <div id="logoff">
+	                    <p><?php echo (isset($_SESSION["nome_usuario"])) ? $_SESSION["nome_usuario"]:""?>, seja bem vindo ao AulaON <br />
+								Fazer <a href="logoff.php" title="Logoff" style="color:#FF6600"><strong>logoff</strong></a>
+						</p>
+                   		</div>                    
 		            <!--/logotipo-->
                 </div>
             </div>
@@ -34,13 +42,7 @@
 <!--conteudo-->
     <!--menu-->
 	<?php 
-		$_SESSION["TipoUsuario"] = "Professor";
-		if(isset($_SESSION["TipoUsuario"]))
-		{
-			$tipoUsuario = $_SESSION["TipoUsuario"];
-			include("$tipoUsuario./MenuLogado.php");
-		}
-		
+		include("$tipoUsuario/MenuLogado.php");
 	?>
     <!--/menu-->
 	<!--principal-->
@@ -51,17 +53,11 @@
 			if($paginaEnviada <> "")
 			{
 				include("$tipoUsuario/$paginaEnviada.php");
-			}else
-			{
-				include("$tipoUsuario/index.php");
-			}
-		}else
-		{
-			include("$tipoUsuario/index.php");
-		}
-		
 
+			}
+		}
 			
+		include("$tipoUsuario/index.php");			
 	?>
     <!--/principal-->
 

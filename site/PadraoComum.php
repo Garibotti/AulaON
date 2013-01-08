@@ -7,8 +7,8 @@
     <link rel="shortcut icon" href="Imagens/logoaulaonn.ico">
     <link rel="stylesheet" href="CSS/CSSReset.css" />
     <link rel="stylesheet" href="CSS/PadraoComum.css" />
-    <link rel="stylesheet" href="CSS/BotaoPesquisar.css" />
-	<script src="JavaScript/jquery-1.8.3.js"></script>
+    <link rel="stylesheet" href="CSS/BotaoPesquisar.css" />  
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 </head>
 
 <body>
@@ -22,9 +22,20 @@
                 <!--/logotipo-->
                 <!--login-->
                     <div id="login">
-                    <p>Seja Bem Vindo ao Aula ON!<br />
-							Faça seu <a href="Login.php" title="Login" style="color:#FF6600"><strong>login</strong></a>
-							ou <a href="Cadastro.php" title="Cadastre-se" style="color:#FF6600"><strong>cadastre-se</strong></a>
+                    <?php 
+                    	session_start("usuario");
+                    ?>
+                    <p><?php echo (isset($_SESSION["nome_usuario"])) ? $_SESSION["nome_usuario"].", s":"S"?>eja bem vindo ao AulaON <br />
+                    <?php 
+                    if(!isset($_SESSION["nome_usuario"])){?>
+                    
+						Faça seu <a href="Login.php" title="Login" style="color:#FF6600"><strong>login</strong></a>
+						ou <a href="Cadastro.php" title="Cadastre-se" style="color:#FF6600"><strong>cadastre-se</strong></a>
+						
+					<?php 
+					}else{?>					
+						Fazer <a href="adm/logoff.php" title="Logoff" style="color:#FF6600"><strong>logoff</strong></a>						
+					<?php }?>
 					</p>
                     </div>
                 <!--/login-->

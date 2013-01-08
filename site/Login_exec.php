@@ -73,10 +73,17 @@ else
 	
 	else //usuario e senha corretos
 	{
-		setcookie("nome_usuario", $username);
-		setcookie("senha_usuario", $sen_codificada);
-		//ver para onde vai??
-		header("location: Index.php");
+		
+		$usuario_id					= mysql_result($resultado, 0, "id");	
+		$nome						= mysql_result($resultado, 0, "Nome");
+		$resultado					= mysql_query("SELECT count(*) as Total FROM  aluno WHERE usuario_id ='$usuario_id'");	
+		
+		session_start("usuario");
+		$_SESSION["TipoUsuario"] 	= (mysql_result($resultado, 0, "Total")>0) ? "Aluno" : "Professor";
+		$_SESSION["nome_usuario"]	= $nome;
+	
+		
+		header("location: adm/Index.php");
 		
 	}
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
 	include("PadraoComum.php");
-	?>
+?>
 <html>
 <body>
 	

@@ -8,8 +8,15 @@
 	 <!--conteudo-->
     <div class="conteudo">
     <div class="principal">
+    <?php 
+    	if(isset($_GET['status']))
+		{
+			
+		}		
+    ?>
+    
     <center>
-	Nome de Usuário ou E-mail:
+	E-mail:
     <br />
 	<form method="POST" action="Login_exec.php" >
     <input type="text" name="Login" size="24"/><br />
@@ -20,11 +27,6 @@
 	<input type="submit" value="Entrar"/>
     <br />  
     </form>
-    <?php
-	
-	if(isset($_GET["teste"]))
-	echo $_GET["teste"];
-	?>
 	    <br />
     <a href="Esqueci_Senha.php">Esqueci minha senha</a><br /></center> 
     </div>

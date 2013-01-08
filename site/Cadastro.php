@@ -5,12 +5,34 @@
 <html>
 <head>
 	
-    <link rel="stylesheet" href="CSS/Cadastro.css" />
-	<link rel="stylesheet" href="CSS/style.css" />
-    <script type="text/javascript" src="Javascript/cidades-estados-v0.2.js"></script>
-	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-	<script type="text/javascript" src="JavaScript/jquery.validate.js"></script>
+    <link rel="stylesheet" href="css/Cadastro.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery.validate.js"></script>
+	<script type="text/javascript" src="js/jquery.bar.js"></script>
+<?php 
 
+	if(isset($_GET['status'])){
+		if($_GET['status'] == "erro"){
+		?>
+		<script type="text/javascript">
+			$(".conteudo").bar({				
+			    color : '#1E90FF',
+			    background_color : '#FFFFFF',
+			    removebutton : false,
+			    position : botton,
+			    message : 'Erro ao realizar o cadastro, pedimos desculpas pelo transtorno.',
+			    time : 5000
+			});
+			$(document).ready(function(){
+				$(".conteudo").click();
+				
+			});
+		</script>
+		<?php 
+		}
+	}
+
+?>
 	<script type="text/javascript">
         function formatar(mascara, documento) {
             var i = documento.value.length;
@@ -23,7 +45,7 @@
         }
 
     </script>
-
+<!-- GIULIANO CORRIGIR DATAPIKER
 <script>
     $(function() {
         $( "#datepicker" ).datepicker({
@@ -31,10 +53,11 @@
             changeYear: true
         });
     });
-    </script>
+</script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
     <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script> 
-
+ -->
+ 
 <script>
 jQuery.validator.addMethod("data", function(value, element) {
     if(value.length!=10) return false;
@@ -84,9 +107,6 @@ return true;
 			required: true,
 			minlength: 3
 			 },
-		sobrenome:{
-			required: true
-		  },
 		 email:{
 			required: true,
 			email: true
@@ -155,21 +175,17 @@ return true;
 
 </head>
 <body>
+
 	 <!--conteudo-->
     <div class="conteudo">
 	<div class="principal">
 	<div class="contact_form">
 	<div class="form_subtitle">Crie seu novo cadastro</div>
-	<form method="POST" id="cadastro" action="" >
+	<form method="POST" id="cadastro" action="Cadastro_exec.php" >
     
 	<div class="form_row">
-    <label class="contact"><strong>Nome:</strong></label>
+    <label class="contact"><strong>Nome Completo:</strong></label>
     <input type="text" name="nome" id="nome"  class="contact_input"/>
-    </div>
-    
-    <div class="form_row">
-    <label class="contact"><strong>Sobrenome:</strong></label>
-    <input class="contact_input" type="text" name="sobrenome" id="sobrenome" size="24" />
     </div>
 	
 	<div class="form_row">
@@ -182,6 +198,14 @@ return true;
     <input class="contact_input" type="text" name="dn" id="dn" maxlength="10" onkeypress="formatar('##/##/####', this)" />
     </div>
     
+    <div class="form_row">
+    <label class="contact"><strong>Tipo de Cadastro</strong></label>
+    <select name="tpCadastro" id="tpCadastro">
+    <option class="contact_input"  name="tpCadastro" value="Aluno" style="margin-left:30%;"/>Aluno</option>
+   	<option class="contact_input"  name="tpCadastro" value="Professor" style="margin-left:30%;"/>Professor</option>
+    </select>
+    </div>
+        
     <div class="form_row">
     <label class="contact"><strong>Sexo:</strong></label>
     <select name="sexo" id="sexo">

@@ -4,9 +4,6 @@
 	?>
 <html>
 <body>
-	<?php 
-	include("PadraoComum.php");
-	?>
 	 <!--conteudo-->
     <div class="conteudo">
     <div class="principal">
