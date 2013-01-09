@@ -1,3 +1,6 @@
+<?php 
+	include("Seguranca.php");
+?>
  	<link rel="stylesheet" href="professor/css/Aulas.css" />
  	<link rel="stylesheet" href="../css/jquery-ui.css" />
     <link rel="stylesheet" href="../css/shadowbox.css" />

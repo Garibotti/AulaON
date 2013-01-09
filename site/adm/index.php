@@ -1,5 +1,5 @@
 <?php 
-include("Seguranca.php");
+	include("Seguranca.php");
 ?>
 <html>
 	<head>

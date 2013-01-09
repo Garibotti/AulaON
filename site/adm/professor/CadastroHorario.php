@@ -1,3 +1,6 @@
+<?php 
+	include("Seguranca.php");
+?>
 <html>
 <head>
     <script language="javascript" type="text/javascript" src="../js/jquery-1.8.3.js"></script>
