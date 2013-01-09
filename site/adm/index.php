@@ -14,7 +14,6 @@ include("Seguranca.php");
 
 <body>
 <?php 
-	session_start("usuario");
 	$tipoUsuario = "";
 	if(isset($_SESSION["TipoUsuario"]))
 	{

@@ -1,9 +1,9 @@
 $(document).ready(function(){
-	
-	$('body').append('<center><div class="mensagem"></div></center>');	
+
 	var codigoUrl		= buscaValorQueryString("codigo");
-	
-	if(codigoUrl!=""){
+
+	if(codigoUrl!="" && codigoUrl != null){
+		$('body').append('<center><div class="mensagem"></div></center>');	
 		var mensagem	= buscaMensagem(codigoUrl);
 		mostraMensagem(mensagem[0],mensagem[1]);
 	}
