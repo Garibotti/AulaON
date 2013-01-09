@@ -1,5 +1,7 @@
+<?php 
+include("Seguranca.php");
+?>
 <html>
-
 	<head>
 	<title> Aula ON </title>
 	<link rel="shortcut icon" href="imagens/logoaulaon.png"/>

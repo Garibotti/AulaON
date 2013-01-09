@@ -3,18 +3,11 @@
 	include("PadraoComum.php");
 	?>
 <html>
-<body>
-	
+<script type="text/javascript" src="js/jquery.bar.js"></script>
+<body>	
 	 <!--conteudo-->
     <div class="conteudo">
-    <div class="principal">
-    <?php 
-    	if(isset($_GET['status']))
-		{
-			
-		}		
-    ?>
-    
+    <div class="principal">    
     <center>
 	E-mail:
     <br />

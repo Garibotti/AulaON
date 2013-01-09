@@ -1,3 +1,6 @@
+<?php 
+	include("Seguranca.php");
+?>	
 	<form id="menu" action="index.php" type="post">
 		<div class="sidebarmenu">
 			<a href="index.php" class="menuitem_red" name="">

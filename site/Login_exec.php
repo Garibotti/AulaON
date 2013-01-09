@@ -26,7 +26,7 @@ $linhas = mysql_num_rows ($resultado);
 if($linhas == 0) //testa se foi encontrado um usuario com o username ou email colocado
 {	
 	//se não foi encontrado
-	header("location:Login.php?teste=Usuário ou seha incorreto!");
+	header("location:Login.php?codigo=4");
 
 }
 
@@ -59,7 +59,7 @@ else
 			$mensage .="Senha:" . $rowsenha;
 			mail($email, "Aula ON - Recuperação de Senha", $mensage);
 
-			header("location:Login.php?teste=Sua senha expirou, foi enviado um email com uma nova senha!");
+			header("location:Login.php?codigo=3");
 		}		
 	}
 	
@@ -68,7 +68,7 @@ else
 	if($sen_codificada != mysql_result($resultado, 0, "Senha")) //confere senha
 	{
 		//se não foi encontrado
-		header("location:Login.php?teste=Usuário ou seha incorreto!");	
+		header("location:Login.php?codigo=4");	
 	}
 	
 	else //usuario e senha corretos

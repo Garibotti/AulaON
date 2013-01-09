@@ -1,4 +1,6 @@
-
+<?php 
+include("Seguranca.php");
+?>
     <!--rodapé-->
     <link rel="stylesheet" href="CSS/Rodape.css" />
     <div id="rodape">    	

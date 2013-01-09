@@ -3,6 +3,7 @@
 	include("PadraoComum.php");
 ?>
 <html>
+<script type="text/javascript" src="js/jquery.bar.js"></script>
 <body>
 	
 	 <!--conteudo-->

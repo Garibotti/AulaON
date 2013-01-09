@@ -9,31 +9,10 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<script type="text/javascript" src="js/jquery.validate.js"></script>
 	<script type="text/javascript" src="js/jquery.bar.js"></script>
-<?php 
 
-	if(isset($_GET['status'])){
-		if($_GET['status'] == "erro"){
-		?>
-		<script type="text/javascript">
-			$(".conteudo").bar({				
-			    color : '#1E90FF',
-			    background_color : '#FFFFFF',
-			    removebutton : false,
-			    position : botton,
-			    message : 'Erro ao realizar o cadastro, pedimos desculpas pelo transtorno.',
-			    time : 5000
-			});
-			$(document).ready(function(){
-				$(".conteudo").click();
-				
-			});
-		</script>
-		<?php 
-		}
-	}
 
-?>
-	<script type="text/javascript">
+<script type="text/javascript">
+
         function formatar(mascara, documento) {
             var i = documento.value.length;
             var saida = mascara.substring(0, 1);
@@ -44,7 +23,7 @@
             }
         }
 
-    </script>
+</script>
 <!-- GIULIANO CORRIGIR DATAPIKER
 <script>
     $(function() {
@@ -174,7 +153,7 @@ return true;
 </script>
 
 </head>
-<body>
+<body>		
 
 	 <!--conteudo-->
     <div class="conteudo">

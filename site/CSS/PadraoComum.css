@@ -104,6 +104,7 @@ body {
 	background: linear-gradient(to bottom, rgba(149,149,149,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(78,78,78,1) 76%,rgba(56,56,56,1) 87%,rgba(27,27,27,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
 	position:fixed;
+	z-index:-1;
 	
 }
 #logo
@@ -132,7 +133,7 @@ body {
     -moz-opacity: 0.95;
     text-align:center;
     left:0px;
-    z-index:9999999;
+    z-index:9999;
     margin:0px;
     padding:0px;
 }
@@ -151,17 +152,18 @@ body {
     line-height:46px;
     font-size: 18px;
     font-family:'Lucida Grande',sans-serif;
+    position:center;
 }
 a.jbar-cross{
     position:absolute;
     width:31px;
     height:31px;
-    background:transparent url(../images/cross.png) no-repeat top left;
+    background:transparent url(../imagens/cross.png) no-repeat top left;
     cursor:pointer;
     right:10px;
 }
 a.jbar-cross:hover{
-    background-image: url(../images/cross_hover.png)
+    background-image: url(../imagens/cross_hover.png)
 }
 .jbar-top a.jbar-cross{
     top:8px;

@@ -1,5 +1,4 @@
 <?php
-header("location:cadastro.php?status=Erro");
 $nome = $_POST["nome"];
 $dn = $_POST['dn'];
 $sexo = $_POST['sexo'];
@@ -44,9 +43,9 @@ if($result){
 	mysql_query("INSERT INTO ".$tpCadastro."(usuario_id) Values('$idUsuario')");
 	
 }else{
-	header("location:cadastro.php?status=Erro");	
+	header("location:cadastro.php?codigo=1");	
 }
 
-header("location:login.php?status=Sucesso");
+header("location:login.php?codigo=2");
 
 ?>
