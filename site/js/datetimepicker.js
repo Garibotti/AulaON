@@ -40,16 +40,16 @@
 	function Timepicker() {
 		this.regional = []; // Available regional settings, indexed by language code
 		this.regional[''] = { // Default regional settings
-			currentText: 'Now',
-			closeText: 'Done',
+			currentText: 'Agora',
+			closeText: 'Confirmar',
 			amNames: ['AM', 'A'],
 			pmNames: ['PM', 'P'],
 			timeFormat: 'HH:mm',
 			timeSuffix: '',
-			timeOnlyTitle: 'Choose Time',
-			timeText: 'Time',
-			hourText: 'Hour',
-			minuteText: 'Minute',
+			timeOnlyTitle: 'Horário',
+			timeText: 'Horário',
+			hourText: 'Hora',
+			minuteText: 'Minuto',
 			secondText: 'Second',
 			millisecText: 'Millisecond',
 			timezoneText: 'Time Zone',
