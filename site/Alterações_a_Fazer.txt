@@ -5,3 +5,5 @@ tirar botão para cadastrar-se, quando o usuário estiver logado
 direcionar o botão Salva na página CadastroHorario.php
 
 colocar calendário no campo "data de nascimento" na página Cadastro.php
+
+acrescentar botão no PadraoComum.php para acessar as páginas adm
