@@ -7,3 +7,14 @@ direcionar o botão Salva na página CadastroHorario.php
 colocar calendário no campo "data de nascimento" na página Cadastro.php
 
 acrescentar botão no PadraoComum.php para acessar as páginas adm
+
+acrescentar página de escolha para aluno/professor ao logar
+
+verificar cadastros iguais
+
+acrescentar barra lateral direita com opção de troca de adm(aluno/professor), para quem tiver cadastro em ambos
+
+alterar nome do PadraoLogado.css para index
+
+verificar horários sobrepostos e se apenas campo "término" for preenchido no CadastroHorario.php
+

@@ -112,19 +112,13 @@
 				<p>Agende os dias e horários disponíveis para a próxima semana:</p><br>
 			</div>
 			
-	<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php" id="domingo" class="semana">Domingo</a>
-	<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php" id="segunda" class="semana">Segunda-feira</a>
-	<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php" id="terca" class="semana">Terça-feira</a>
-	<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php" id="quarta" class="semana">Quarta-feira</a>
-	<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php" id="quinta" class="semana">Quinta-feira</a>
-	<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php" id="sexta" class="semana">Sexta-feira</a>
-	<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php" id="sabado" class="semana">Sábado</a>
-	
-	<script>
-	$("#domingo").click(function(){
-	$("#domingo").css('background-color', "#339966");
-	});
-	</script>
+			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Domingo" id="domingo" class="semana">Domingo</a>
+			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Segunda-feira" id="segunda" class="semana">Segunda-feira</a>
+			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Terça-feira" id="terca" class="semana">Terça-feira</a>
+			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Quarta-feira" id="quarta" class="semana">Quarta-feira</a>
+			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Quinta-feira" id="quinta" class="semana">Quinta-feira</a>
+			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Sexta-feira" id="sexta" class="semana">Sexta-feira</a>
+			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Sábado" id="sabado" class="semana">Sábado</a>
 	
 		</div>
     </div>   
