@@ -1,31 +1,29 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <script language="javascript" type="text/javascript" src="js/jquery-1.8.3.js"></script>
-    <script src="js/jqueryui-1.9.2.js"></script>
-    <script src="js/datetimepicker.js"></script>
-    <link rel="stylesheet" href="css/jquery-ui.css" />
-    
-    <script>
-    	$(function() {
-        	$( ".datepicker" ).timepicker();
-    	});
-    </script>   
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Usando máscaras com jquery</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.maskedinput.js"></script>
 </head>
-
+<script type="text/javascript">
+$(document).ready(function(){
+	$("input.data").mask("99/99/9999");
+        $("input.cpf").mask("999.999.999-99");
+        $("input.cep").mask("99.999-999");
+});
+</script>
 <body>
-    
-    <p>Adicione aqui seus horários para Domingo</p><br>
-    <input type="text" name="tab" id="tab" class="datepicker" /> 
-    <button id="incluir" onClick="afixar()">Incluir</button> 
-    <ul id="tabela"></ul>
-
-	<script>
-		function afixar() { 
-		var title = $("#tab").val();
-		$("#tabela").append("<li>" + title + "</li>");
-		}
-	</script>
-
+<h1>Usando máscaras com jquery</h1>
+<label for="data">Data:</label><br>
+<input type="text" class="data" id="data" name="data" /><br><br>
+ 
+<label for="cpf">CPF:</label><br>
+<input type="text" class="cpf" id="cpf" name="cpf" /><br><br>
+ 
+<label for="cep">CEP:</label><br>
+<input type="text" class="cep" id="cep" name="cep" /><br><br>
+ 
+<p align="center"><a href="http://www.rafaelwendel.com">www.rafaelwendel.com</a></p>
+<p align="center">Twitter: <a href="http://www.twitter.com/rafaelwendel">@rafaelwendel</a></p>
 </body>
 </html>
-
