@@ -54,10 +54,13 @@
 			{
 				include("$tipoUsuario/$paginaEnviada.php");
 
+			}else{
+				include("$tipoUsuario/index.php");
 			}
+		}else{
+			include("$tipoUsuario/index.php");
 		}
-			
-		include("$tipoUsuario/index.php");			
+		
 	?>
     <!--/principal-->
 
