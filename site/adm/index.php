@@ -53,7 +53,14 @@
 
 			if($paginaEnviada <> "")
 			{
-				include("$tipoUsuario/$paginaEnviada.php");
+				$caminho = __DIR__ . "\\". $paginaEnviada . ".php";
+
+				if(file_exists($caminho)){
+					include("$tipoUsuario/$paginaEnviada.php");		
+				}else{
+					include("$tipoUsuario/index.php");
+				}
+				
 
 			}else{
 				include("$tipoUsuario/index.php");

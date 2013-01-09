@@ -34,7 +34,7 @@ function buscaMensagem(codigo){
 	case ("5"):
 		mensagem[0] = "Você não tem permissão para acessar está página.";
 		mensagem[1]	= false;
-		break;						
+		break;							
 	default:
 		mensagem[0] = "Ocorreu um erro durante o processamento da sua informação, por favor tente novamente.";
 		mensagem[1]	= false;
