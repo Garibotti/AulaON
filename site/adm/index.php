@@ -1,7 +1,7 @@
 <html>
 
 	<head>
-	<title> Aula ON </title>
+	<title> AulaON </title>
 	<link rel="shortcut icon" href="imagens/logoaulaon.png"/>
     <link rel="stylesheet" href="css/CSSReset.css" />
     <link rel="stylesheet" href="css/PadraoLogado.css" />

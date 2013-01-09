@@ -27,14 +27,13 @@
 		function afixar() { 
 			var title = $("#tab").val();
 			var title2 = $("#tab2").val();
-			if(title < title2 || title != title2){
-				
-				
+
+			if(title == title2 || title > title2){alert('Horário inválido.');}
+			else{
 				$("#tabela").append("<li class='listahi'>" + title + "</li>" + "<li class='listahf'>" + title2 + "</li>");
 				$("#tab").val("");
 				$("#tab2").val("");
-			}
-			else{alert('Horário de início maior que horário de término');}
+				}
 		}
 	</script>
 

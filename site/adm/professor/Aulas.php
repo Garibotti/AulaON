@@ -109,13 +109,13 @@
 				<p>Agende os dias e horários disponíveis para a próxima semana:</p><br>
 			</div>
 			
-	<a rel="shadowbox" href="professor/CadastroHorario.php" id="domingo" class="semana">Domingo</a>
-	<a rel="shadowbox" href="professor/CadastroHorario.php" id="segunda" class="semana">Segunda-feira</a>
-	<a rel="shadowbox" href="professor/CadastroHorario.php" id="terca" class="semana">Terça-feira</a>
-	<a rel="shadowbox" href="professor/CadastroHorario.php" id="quarta" class="semana">Quarta-feira</a>
-	<a rel="shadowbox" href="professor/CadastroHorario.php" id="quinta" class="semana">Quinta-feira</a>
-	<a rel="shadowbox" href="professor/CadastroHorario.php" id="sexta" class="semana">Sexta-feira</a>
-	<a rel="shadowbox" href="professor/CadastroHorario.php" id="sabado" class="semana">Sábado</a>
+	<a rel="shadowbox;height=600;width=600" href="professor/CadastroHorario.php" id="domingo" class="semana">Domingo</a>
+	<a rel="shadowbox;height=600;width=600" href="professor/CadastroHorario.php" id="segunda" class="semana">Segunda-feira</a>
+	<a rel="shadowbox;height=600;width=600" href="professor/CadastroHorario.php" id="terca" class="semana">Terça-feira</a>
+	<a rel="shadowbox;height=600;width=600" href="professor/CadastroHorario.php" id="quarta" class="semana">Quarta-feira</a>
+	<a rel="shadowbox;height=600;width=600" href="professor/CadastroHorario.php" id="quinta" class="semana">Quinta-feira</a>
+	<a rel="shadowbox;height=600;width=600" href="professor/CadastroHorario.php" id="sexta" class="semana">Sexta-feira</a>
+	<a rel="shadowbox;height=600;width=600" href="professor/CadastroHorario.php" id="sabado" class="semana">Sábado</a>
 	
 	<script>
 	$("#domingo").click(function(){
