@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="CSS/CSSReset.css" />
     <link rel="stylesheet" href="CSS/PadraoComum.css" />
     <link rel="stylesheet" href="CSS/BotaoPesquisar.css" />  
-	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script language="javascript" type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	
 </head>
 
 <body>

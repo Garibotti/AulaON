@@ -7,8 +7,10 @@
 	
     <link rel="stylesheet" href="css/Cadastro.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/jquery-ui.css" />
 	<script type="text/javascript" src="js/jquery.validate.js"></script>
 	<script type="text/javascript" src="js/jquery.bar.js"></script>
+	<script language="javascript" type="text/javascript" src="js/jqueryui-calendarioCadastro.js"></script>
 
 
 <script type="text/javascript">
@@ -24,19 +26,16 @@
         }
 
 </script>
-<!-- GIULIANO CORRIGIR DATAPIKER
+
 <script>
     $(function() {
-        $( "#datepicker" ).datepicker({
+        $( "#dn" ).datepicker({
             changeMonth: true,
             changeYear: true
         });
     });
 </script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
-    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script> 
- -->
- 
+
 <script>
 jQuery.validator.addMethod("data", function(value, element) {
     if(value.length!=10) return false;
