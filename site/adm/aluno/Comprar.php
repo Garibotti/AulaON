@@ -1,6 +1,7 @@
 <?php 
 	include("Seguranca.php");
 ?>
+	 <link rel="stylesheet" href="aluno/css/Comprar.css" />
 	<!--conteudo-->
     <div class="conteudo">
     <div class="principal">
@@ -18,7 +19,7 @@
 	    			</ul>
     			</div>
     	</div>
-     	<img class="btn_comprar" title="botao_comprar" src="imagens/imagensbotao_comprar.fw.png" alt="Comprar">
+     	<a href="comprarSeguro.php"><img class="btn_comprar" title="botao_comprar" src="aluno/imagens/botao_comprar.fw.png" alt="Comprar"></a>
     </div>
     <br />
     <form action="" method="post">
