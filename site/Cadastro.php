@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/jquery-ui.css" />
 	<script type="text/javascript" src="js/jquery.validate.js"></script>
-	<script type="text/javascript" src="js/jquery.bar.js"></script>
+	<script language="javascript"  type="text/javascript" src="js/jquery.bar.js"></script>
 	<script language="javascript" type="text/javascript" src="js/jqueryui-calendarioCadastro.js"></script>
 
 
