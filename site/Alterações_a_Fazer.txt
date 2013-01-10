@@ -16,3 +16,4 @@ alterar nome do PadraoLogado.css para index
 
 verificar horários sobrepostos e se apenas campo "término" for preenchido no CadastroHorario.php
 
+verificar resolução e cores das páginas em outros navegadores

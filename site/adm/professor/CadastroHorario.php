@@ -41,7 +41,8 @@
     <input id="salvar" class="botao" type="submit" onClick="" value="Salvar"/>
     <input id="limpar" class="botao" type="submit" onClick="limpar()" value="Limpar"/>
     
-    <table id="tabela">
+    
+    <table class="tabela">
     	<tr>
 			<th>Início</th>
 			<th>Término</th>
@@ -60,12 +61,27 @@
 
 			if(title == title2 || title > title2){alert('Horário inválido.');}
 			else{
-				$("#tabela").append("<tr>"+"<td class='listahi'>" + title + "</td>" + "<td class='listahf'>" + title2 + "</td>"+"</tr>");
+				$(".tabela").append("<tr class='linhas "+i+"'>"+"<td class='listahi'>" + title + "</td>" + "<td class='listahf'>" + title2 + "<a  style='float:right' class='removerCampo' rel='"+i+"' href='#'>" + "<img src='../../imagens/error.png' border='0' />" + "</a>" + "</td>" + "</tr>");
+
 				$("#tab").val("");
 				$("#tab2").val("");
 				}
 		}
-	}	
+	}
+		$('#incluir').click(function(){
+			$(".removerCampo").unbind("click");
+			$(".removerCampo").bind("click", function () {
+				var titleRemover = $(this).attr('rel');
+
+				$(".tabela tr."+titleRemover).remove();
+			});
+		});
+		
+		$(".removerCampo").click(function(){
+			alert('ds');
+		});
+		
+
 	</script>
 
 	<script>
