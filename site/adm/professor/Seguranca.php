@@ -11,7 +11,7 @@
 
 	if(stristr($_SERVER['PHP_SELF'],"Aluno") || stristr($_SERVER['PHP_SELF'],"Professor")){
 		
-		if(!isset($_SERVER['HTTP_REFERER']){
+		if(!isset($_SERVER['HTTP_REFERER'])){
 			header("location: ../../index.php?codigo=5");
 		}		
 	}
