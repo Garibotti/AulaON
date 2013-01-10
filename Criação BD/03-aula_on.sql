@@ -45,7 +45,6 @@ DROP TABLE IF EXISTS `Site_aulas`.`Usuario` ;
 CREATE  TABLE IF NOT EXISTS `Site_aulas`.`Usuario` (
   `Id` INT NOT NULL AUTO_INCREMENT ,
   `Nome` VARCHAR(45) NOT NULL ,
-  `Sobrenome` VARCHAR(45) NOT NULL ,
   `DN` DATE NOT NULL ,
   `Sexo` VARCHAR(45) NOT NULL ,
   `CPF` VARCHAR(45) NOT NULL ,
@@ -54,6 +53,7 @@ CREATE  TABLE IF NOT EXISTS `Site_aulas`.`Usuario` (
   `Celular` VARCHAR(45) NOT NULL ,
   `Senha` VARCHAR(45) NOT NULL ,
   `Data_exp` DATETIME,
+  `Senha_temp` VARCHAR(45) NOT NULL default '' ,
   PRIMARY KEY (`Id`) )
 ENGINE = InnoDB;
 

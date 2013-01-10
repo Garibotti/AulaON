@@ -22,8 +22,7 @@ function antiInjection($str)
 }
 
 $nome = antiInjection($nome);
-$snome = antiInjection($snome);
-$dn = antiInjection($dn);
+$dn = converter_data(antiInjection($dn));
 $cpf = antiInjection($cpf);
 $email = antiInjection($email);
 $telefone = antiInjection($telefone);
@@ -36,16 +35,22 @@ include "conecta_mysql.php";
 $result = mysql_query("INSERT INTO usuario(Nome,DN,Sexo,CPF,Email,Telefone,Celular,Senha) Values('$nome', '$dn' , '$sexo', 
 '$cpf', '$email', '$telefone', '$celular', '$senha')");
 
+
 //Com o resultado insere um registro na tabela de aluno ou professor.
-if($result){
-	
+if($result){	
 	$idUsuario = mysql_insert_id();	
 	mysql_query("INSERT INTO ".$tpCadastro."(usuario_id) Values('$idUsuario')");
-	
+	header("location:login.php?codigo=2");	
 }else{
 	header("location:cadastro.php?codigo=1");	
 }
 
-header("location:login.php?codigo=2");
+function converter_data($data) {
+	
+	$data = implode("/",array_reverse(explode("-",$data)));
+	$sdata = implode("-",array_reverse(explode("/",$data)));
+	
+	return $sdata;
+}
 
 ?>
