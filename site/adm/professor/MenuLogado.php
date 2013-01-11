@@ -11,6 +11,10 @@
 				<!-- <span class="accordprefix"></span> -->
 				Aulas
 			</a>
+			<a href="javascript:void(0)" class="menuitem_red" name="GradeHorarios">
+				<!-- <span class="accordprefix"></span> -->
+				Grade de Horários
+			</a>
 			<a href="javascript:void(0)" class="menuitem_red" name="ProximaAula">
 				<!-- <span class="accordprefix"></span> -->
 				Próxima Aula
