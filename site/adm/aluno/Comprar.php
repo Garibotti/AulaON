@@ -23,8 +23,7 @@
 			var valorCompra = $('#valorDeCompra').val();
 			$('.comprar').attr("href",'aluno/ComprarSeguro.php?valor='+valorCompra);	
 			//Shadowbox.clearCache(); 
-			//Shadowbox.setup(); 			
-			
+			//Shadowbox.setup(); 						
 		});
 		
 	});	
