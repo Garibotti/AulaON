@@ -2,8 +2,9 @@
 	include("Seguranca.php");
 ?>
  	<link rel="stylesheet" href="professor/css/Aulas.css" />
- 	<link rel="stylesheet" href="../css/jquery-ui.css" />
+ 	<link rel="stylesheet" href="professor/css/jquery-ui-cadastroAulas.css" />
     <link rel="stylesheet" href="../css/shadowbox.css" />
+    <link rel="stylesheet" href="professor/css/grades.css" />
     
     <script src="../js/datetimepicker.js"></script>
 	<script src="../js/shadowbox.js"></script>
@@ -54,7 +55,26 @@
 		    $("#up_content").append("<input>");l++;}
 		  });
 		});
-	</script>	
+	</script>
+	
+	<script>
+	$(function() {
+	    $( ".dsemana" ).draggable({ revert: "invalid" });
+	 
+	    $( "#gradesalva" ).droppable({
+	      activeClass: "ui-state-hover",
+	      hoverClass: "ui-state-active",
+	    //  drop: function( event, ui ) {
+	    //    $( this )
+	    //      .addClass( ".gradesalva" )
+	    //      .find( "p" )
+	    //        .html( "Grade de horários salva!" );
+     // }
+
+	     
+    });
+  });
+  </script>	
 	<!--conteudo-->
     <div class="conteudo">
     	<div class="principal">
@@ -112,14 +132,44 @@
 				<p>Agende os dias e horários disponíveis para a próxima semana:</p><br>
 			</div>
 			
-			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Domingo" id="domingo" class="semana">Domingo</a>
-			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Segunda-feira" id="segunda" class="semana">Segunda-feira</a>
-			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Terça-feira" id="terca" class="semana">Terça-feira</a>
-			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Quarta-feira" id="quarta" class="semana">Quarta-feira</a>
-			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Quinta-feira" id="quinta" class="semana">Quinta-feira</a>
-			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Sexta-feira" id="sexta" class="semana">Sexta-feira</a>
-			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Sábado" id="sabado" class="semana">Sábado</a>
-	
+			<div id="dom" class="dsemana">
+			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Domingo" id="domingo" class="semana">Domingo</a><br>
+			<p></p>
+			</div>
+			
+			<div id="seg" class="dsemana">
+			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Segunda-feira" id="segunda" class="semana">Segunda-feira</a><br>
+			<p></p>
+			</div>
+			
+			<div id="ter" class="dsemana">
+			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Terça-feira" id="terca" class="semana">Terça-feira</a><br>
+			</div>
+			
+			<div id="qua" class="dsemana">
+			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Quarta-feira" id="quarta" class="semana">Quarta-feira</a><br>
+			</div>
+			
+			<div id="qui" class="dsemana">
+			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Quinta-feira" id="quinta" class="semana">Quinta-feira</a><br>
+			</div>
+			
+			<div id="sex" class="dsemana">
+			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Sexta-feira" id="sexta" class="semana">Sexta-feira</a><br>
+			</div>
+			
+			<div id="sab" class="dsemana">
+			<a rel="shadowbox;height=520;width=520" href="professor/CadastroHorario.php?dia=Sábado" id="sabado" class="semana">Sábado</a><br>
+			</div>
+			
+			<div id="gradesalva" class="gradesalva">
+  			<p id="gradesalva">Adicione aqui a grades que deseja salvar</p>
+			</div>
+			
+			<div id="lixeira" class="lixeira">
+  			<a  class='lixo' title='Lixeira'><img src='../imagens/lixeira.png'/></a>
+			</div>
+
 		</div>
     </div>   
     <!--/conteudo-->

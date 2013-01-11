@@ -1,5 +1,5 @@
 #search {
-	background: url(../images/bg-search.gif) no-repeat right bottom;
+	background: url(../imagens/bg-search.gif) no-repeat right bottom;
 	height: 47px;
 	width: 268px;
 	padding: 13px 0 0;
@@ -27,7 +27,7 @@
 	padding: 0;
 }
 #search .button {
-	background: url(../images/spotlight.gif) no-repeat right center;
+	background: url(../imagens/spotlight.gif) no-repeat right center;
 	border: 0;
 	cursor: pointer;
 	height: 38px;

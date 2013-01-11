@@ -29,7 +29,7 @@
     <label id="titulo"><strong>Adicione aqui sua grade de horários para <?php echo (isset($_GET["dia"])) ? $_GET["dia"]:""?></strong></label><br><br>
     
     <label class="dados"><strong>Nome da grade:</strong></label>
-    <input type="text"class="nomegrade" maxlength="9"/><br><br>
+    <input type="text" class="nomegrade" maxlength="9" value=""/><br><br>
     
     <label class="dados"><strong>Início:</strong></label>
     <input type="text" name="tab" id="tab" class="datepicker" maxlength="5" />
@@ -38,7 +38,7 @@
     <input type="text" name="tab2" id="tab2" class="datepicker" maxlength="5" />
     
     <input id="incluir" class="botao" type="submit" onClick="afixar()" value="Incluir"/>
-    <input id="salvar" class="botao" type="submit" onClick="" value="Salvar"/>
+    <input id="salvar" class="botao" type="submit" onClick="salvar()" value="Salvar"/>
     <input id="limpar" class="botao" type="submit" onClick="limpar()" value="Limpar"/>
     
     
@@ -89,6 +89,27 @@
 			$("#tab").val("");
 			$("#tab2").val("");
 			$(".nomegrade").val("");
+		}
+	</script>
+	
+	<script>
+		function salvar() { 
+			var nomegrade = $(".nomegrade").val();
+
+			$(document).ready( function (){ 
+
+			    $("#salvar").click(function(){
+			    
+			    var parentElement = $('.nomegrade').val();
+			    
+			    alert(parentElement);
+			    
+			    });
+			    
+			 });
+
+		//	window.parent.Shadowbox.close();
+			
 		}
 	</script>
 </body>

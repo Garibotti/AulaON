@@ -3,7 +3,7 @@ body {
 			padding: 13px 0 0 4px;
 			bottom: -20px;
 			left: 0;
-			background: url(../images/bg-menu-left-curve.gif);
+			background: url(../imagens/bg-menu-left-curve.gif);
 			background-repeat:no-repeat;
 			background-position:left bottom;
 			
@@ -18,7 +18,7 @@ body {
 			float:left;
 			width: 100%;
 			height: 70px;
-			background: url(../images/bg-menu.gif);
+			background: url(../imagens/bg-menu.gif);
 			background-repeat:repeat x;
 			font:80% Tahoma;
 
