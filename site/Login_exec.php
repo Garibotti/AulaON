@@ -81,6 +81,7 @@ else
 		session_start("usuario");
 		$_SESSION["TipoUsuario"] 	= (mysql_result($resultado, 0, "Total")>0) ? "Aluno" : "Professor";
 		$_SESSION["nome_usuario"]	= $nome;
+		$_SESSION["usuario_id"]		= $usuario_id;
 	
 		
 		header("location: adm/Index.php");

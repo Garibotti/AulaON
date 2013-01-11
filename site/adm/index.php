@@ -10,6 +10,7 @@
     <script language="javascript" type="text/javascript" src="js/jquery-1.8.3.js"></script>
     <script language="javascript" type="text/javascript" src="js/jqueryui-1.9.2.js"></script>
     <script language="javascript" type="text/javascript" src="js/ComponentesForms.js"></script>     
+    <script language="javascript"  type="text/javascript" src="../js/jquery.bar.js"></script>
     </head>
 
 <body>

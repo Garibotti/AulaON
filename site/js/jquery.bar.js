@@ -34,7 +34,15 @@ function buscaMensagem(codigo){
 	case ("5"):
 		mensagem[0] = "Você não tem permissão para acessar está página.";
 		mensagem[1]	= false;
-		break;							
+		break;		
+	case ("6"):
+		mensagem[0] = "Não foi possivel inciar a compra, por favor tente novamente, se o erro persistir entre em contato com a nossa central.";
+		mensagem[1]	= false;
+		break;	
+	case ("7"):
+		mensagem[0] = "Para realizar uma compra escolha um valor.";
+		mensagem[1]	= false;
+		break;			
 	default:
 		mensagem[0] = "Ocorreu um erro durante o processamento da sua informação, por favor tente novamente.";
 		mensagem[1]	= false;
