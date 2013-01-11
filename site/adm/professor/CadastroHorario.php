@@ -31,6 +31,8 @@
     <label class="dados"><strong>Nome da grade:</strong></label>
     <input type="text" class="nomegrade" maxlength="9" value=""/><br><br>
     
+     <input type="hidden" id="dia" class="" value="<?php echo (isset($_GET["dia"])) ? strtolower($_GET["dia"]):""?>" />
+     
     <label class="dados"><strong>Início:</strong></label>
     <input type="text" name="tab" id="tab" class="datepicker" maxlength="5" />
     
@@ -93,24 +95,21 @@
 	</script>
 	
 	<script>
-		function salvar() { 
-			var nomegrade = $(".nomegrade").val();
 
 			$(document).ready( function (){ 
 
 			    $("#salvar").click(function(){
-			    
-			    var parentElement = $('.nomegrade').val();
-			    
-			    alert(parentElement);
-			    
-			    });
+				    
+				    var parentElement = $('.nomegrade').val();
+			    	var dia = $('#dia').val();				
+				    parent.$('div[name='+dia+']').append('<p>' + parentElement  + '</p>');
+					window.parent.Shadowbox.close();
+				    });
 			    
 			 });
 
-		//	window.parent.Shadowbox.close();
-			
-		}
+		
+
 	</script>
 </body>
 </html>
